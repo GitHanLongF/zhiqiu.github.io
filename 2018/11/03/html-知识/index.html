@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://githanlongf.github.io/zhiqiu.github.io">
-  <title>Tag: blog | 越努力越幸福</title>
+  <title>越努力越幸福</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="HTML Doctype作用？标准模式与兼容模式各有什么区别? （1）、&amp;lt;!DOCTYPE&amp;gt;声明位于HTML文档中的第一行，处于  标签之前。告知浏览器的解析器用什么文档标准解析这个文档。DOCTYPE不存在或格式不正确会导致文档以兼容模式呈现。（2）、标准模式的排版 和JS运作模式都是以该浏览器支持的最高标准运行。在兼容模式中，页面以宽松的向后兼容的方式显示,模拟老式浏览器的行为以防">
+<meta name="keywords" content="html,面试题">
+<meta property="og:type" content="article">
 <meta property="og:title" content="越努力越幸福">
-<meta property="og:url" content="https://githanlongf.github.io/zhiqiu.github.io/tags/blog/index.html">
+<meta property="og:url" content="https://githanlongf.github.io/zhiqiu.github.io/2018/11/03/html-知识/index.html">
 <meta property="og:site_name" content="越努力越幸福">
+<meta property="og:description" content="HTML Doctype作用？标准模式与兼容模式各有什么区别? （1）、&amp;lt;!DOCTYPE&amp;gt;声明位于HTML文档中的第一行，处于  标签之前。告知浏览器的解析器用什么文档标准解析这个文档。DOCTYPE不存在或格式不正确会导致文档以兼容模式呈现。（2）、标准模式的排版 和JS运作模式都是以该浏览器支持的最高标准运行。在兼容模式中，页面以宽松的向后兼容的方式显示,模拟老式浏览器的行为以防">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-11-05T01:55:10.735Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="越努力越幸福">
+<meta name="twitter:description" content="HTML Doctype作用？标准模式与兼容模式各有什么区别? （1）、&amp;lt;!DOCTYPE&amp;gt;声明位于HTML文档中的第一行，处于  标签之前。告知浏览器的解析器用什么文档标准解析这个文档。DOCTYPE不存在或格式不正确会导致文档以兼容模式呈现。（2）、标准模式的排版 和JS运作模式都是以该浏览器支持的最高标准运行。在兼容模式中，页面以宽松的向后兼容的方式显示,模拟老式浏览器的行为以防">
   
     <link rel="alternative" href="/atom.xml" title="越努力越幸福" type="application/atom+xml">
   
@@ -150,64 +155,187 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-html-知识" class="article article-type-post " itemscope="" itemprop="blogPost">
+  <div class="article-inner">
     
-    
+    <div class="article-entry" itemprop="articleBody">
       
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/zhiqiu.github.io/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/zhiqiu.github.io/2018/11/03/test/" class="archive-article-date">
-  	<time datetime="2018-11-03T08:39:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/zhiqiu.github.io/2018/11/03/test/">test</a>
-    </h1>
-  
+        <p></p><h1>HTML</h1><p></p>
+<p></p><h3>Doctype作用？标准模式与兼容模式各有什么区别?</h3><p></p>
+<p>（1）、&lt;!DOCTYPE&gt;声明位于HTML文档中的第一行，处于 <html> 标签之前。告知浏览器的解析器用什么文档标准解析这个文档。DOCTYPE不存在或格式不正确会导致文档以兼容模式呈现。（2）、标准模式的排版 和JS运作模式都是以该浏览器支持的最高标准运行。在兼容模式中，页面以宽松的向后兼容的方式显示,模拟老式浏览器的行为以防止站点无法工作。</html></p><br><h3>HTML5 为什么只需要写 &lt;!DOCTYPE HTML&gt;？</h3><br><p>HTML5 不基于 SGML，因此不需要对DTD进行引用，但是需要doctype来规范浏览器的行为（让浏览器按照它们应该的方式来运行）；而HTML4.01基于SGML,所以需要对DTD进行引用，才能告知浏览器文档所使用的文档类型。</p><br><h3>行内元素有哪些？块级元素有哪些？ 空(void)元素有那些？</h3><br><p>首先：CSS规范规定，每个元素都有display属性，确定该元素的类型，每个元素都有默认的display值，如div的display默认值为“block”，则为“块级”元素；span默认display属性值为“inline”，是“行内”元素。<br><br>  （1）行内元素有：a b span img input select strong（强调的语气）<br>  （2）块级元素有：div ul ol li dl dt dd h1 h2 h3 h4…p<br><br>  不同浏览器（版本）、HTML4（5）、CSS2等实际略有差异<br>  参考: <a href="http://stackoverflow.com/questions/6867254/browsers-default-css-for-html-elements" target="_blank" rel="noopener">http://stackoverflow.com/questions/6867254/browsers-default-css-for-html-elements</a></p><br><h3>页面导入样式时，使用link和@import有什么区别？</h3><br><p>（1）link属于XHTML标签，除了加载CSS外，还能用于定义RSS, 定义rel连接属性等作用；而@import是CSS提供的，只能用于加载CSS;<br><br>  （2）页面被加载的时，link会同时被加载，而@import引用的CSS会等到页面被加载完再加载;<br><br>  （3）import是CSS2.1 提出的，只在IE5以上才能被识别，而link是XHTML标签，无兼容问题;<br><br>   (4)link支持使用js控制DOM去改变样式，而@import不支持;</p><br><h3>介绍一下你对浏览器内核的理解？</h3><br><p>主要分成两部分：渲染引擎(layout engineer或Rendering Engine)和JS引擎。<br>  渲染引擎：负责取得网页的内容（HTML、XML、图像等等）、整理讯息（例如加入CSS等），以及计算网页的显示方式，然后会输出至显示器或打印机。浏览器的内核的不同对于网页的语法解释会有不同，所以渲染的效果也不相同。所有网页浏览器、电子邮件客户端以及其它需要编辑、显示网络内容的应用程序都需要内核。<br><br>  JS引擎则：解析和执行javascript来实现网页的动态效果。<br><br>  最开始渲染引擎和JS引擎并没有区分的很明确，后来JS引擎越来越独立，内核就倾向于只指渲染引擎。</p><br><h3>常见的浏览器内核有哪些？</h3><br><p>Trident内核：IE,MaxThon,TT,The World,360,搜狗浏览器等。[又称MSHTML]<br>  Gecko内核：Netscape6及以上版本，FF,MozillaSuite/SeaMonkey等<br>  Presto内核：Opera7及以上。      [Opera内核原为：Presto，现为：Blink;]<br>  Webkit内核：Safari,Chrome等。   [ Chrome的：Blink（WebKit的分支）]<br><br>详细文章：<a href="http://www.cnblogs.com/fullhouse/archive/2011/12/19/2293455.html" target="_blank" rel="noopener">浏览器内核的解析和对比</a></p><br><h3>html5有哪些新特性、移除了那些元素？如何处理HTML5新标签的浏览器兼容问题？如何区分 HTML 和 HTML5？</h3><br><p>HTML5 现在已经不是 SGML 的子集，主要是关于图像，位置，存储，多任务等功能的增加。<br>        绘画 canvas;<br>        用于媒介回放的 video 和 audio 元素;<br>        本地离线存储 localStorage 长期存储数据，浏览器关闭后数据不丢失;<br>        sessionStorage 的数据在浏览器关闭后自动删除;<br>        语意化更好的内容元素，比如 article、footer、header、nav、section;<br>        表单控件，calendar、date、time、email、url、search;<br>        新的技术webworker, websocket, Geolocation;<br><br>    移除的元素：<br>        纯表现的元素：basefont，big，center，font, s，strike，tt，u;<br>        对可用性产生负面影响的元素：frame，frameset，noframes；<br><br>  <em> 支持HTML5新标签：<br>       IE8/IE7/IE6支持通过document.createElement方法产生的标签，<br>         可以利用这一特性让这些浏览器支持HTML5新标签，<br>         浏览器支持新标签后，还需要添加标签默认的样式。<br><br>       当然也可以直接使用成熟的框架、比如html5shim;<br>       <!--[if lt IE 9]>
+          <script> src="http://html5shim.googlecode.com/svn/trunk/html5.js"</script>
+       <![endif]-->
 
-        <div class="article-info info-on-right">
-          
+  </em> 如何区分HTML5： DOCTYPE声明\新增的结构元素\功能元素</p><br>  <h3>简述一下你对HTML语义化的理解？</h3><br>  <p>用正确的标签做正确的事情。<br>  html语义化让页面的内容结构化，结构更清晰，便于对浏览器、搜索引擎解析;<br>  即使在没有样式CSS情况下也以一种文档格式显示，并且是容易阅读的;<br>  搜索引擎的爬虫也依赖于HTML标记来确定上下文和各个关键字的权重，利于SEO;<br>  使阅读源代码的人对网站更容易将网站分块，便于阅读维护理解。</p><br><h3>HTML5的离线储存怎么使用，工作原理能不能解释一下？</h3><br>  <p>在用户没有与因特网连接时，可以正常访问站点或应用，在用户与因特网连接时，更新用户机器上的缓存文件。<br>  原理：HTML5的离线存储是基于一个新建的.appcache文件的缓存机制(不是存储技术)，通过这个文件上的解析清单离线存储资源，这些资源就会像cookie一样被存储了下来。之后当网络在处于离线状态下时，浏览器会通过被离线存储的数据进行页面展示。<br><br><br>  如何使用：<br>  1、页面头部像下面一样加入一个manifest的属性；<br>  2、在cache.manifest文件的编写离线存储的资源；<br>      CACHE MANIFEST<br>      #v0.11<br>      CACHE:<br>      js/app.js<br>      css/style.css<br>      NETWORK:<br>      resourse/logo.png<br>      FALLBACK:<br>      / /offline.html<br>  3、在离线状态时，操作window.applicationCache进行需求实现。</p><br>  <h3>浏览器是怎么对HTML5的离线储存资源进行管理和加载的呢？</h3><br>  <p>在线的情况下，浏览器发现html头部有manifest属性，它会请求manifest文件，如果是第一次访问app，那么浏览器就会根据manifest文件的内容下载相应的资源并且进行离线存储。如果已经访问过app并且资源已经离线存储了，那么浏览器就会使用离线的资源加载页面，然后浏览器会对比新的manifest文件与旧的manifest文件，如果文件没有发生改变，就不做任何操作，如果文件改变了，那么就会重新下载文件中的资源并进行离线存储。<br>  离线的情况下，浏览器就直接使用离线存储的资源。</p><br><h3>请描述一下 cookies，sessionStorage 和 localStorage 的区别？</h3><br>  <p>cookie是网站为了标示用户身份而储存在用户本地终端（Client Side）上的数据（通常经过加密）。<br>  cookie数据始终在同源的http请求中携带（即使不需要），记会在浏览器和服务器间来回传递。<br>  sessionStorage和localStorage不会自动把数据发给服务器，仅在本地保存。<br><br>  存储大小：<br>      cookie数据大小不能超过4k。<br>      sessionStorage和localStorage 虽然也有存储大小的限制，但比cookie大得多，可以达到5M或更大。<br><br>  有期时间：<br>      localStorage    存储持久数据，浏览器关闭后数据不丢失除非主动删除数据；<br>      sessionStorage  数据在当前浏览器窗口关闭后自动删除。<br>      cookie          设置的cookie过期时间之前一直有效，即使窗口或浏览器关闭<br></p><br><h3>iframe有那些缺点？</h3><br>  <p><em>iframe会阻塞主页面的Onload事件；
+  </em>搜索引擎的检索程序无法解读这种页面，不利于SEO;<br><br>  *iframe和主页面共享连接池，而浏览器对相同域的连接有限制，所以会影响页面的并行加载。<br><br>  使用iframe之前需要考虑这两个缺点。如果需要使用iframe，最好是通过javascript<br>  动态给iframe添加src属性值，这样可以绕开以上两个问题。<br></p><br><h3>Label的作用是什么？是怎么用的？</h3><br>  <p>label标签来定义表单控制间的关系,当用户选择该标签时，浏览器会自动将焦点转到和标签相关的表单控件上。<br><br>  #<label for="Name">Number:</label><br>  #<input type="“text“name=" name""="" id="Name"><br><br>  # <label>Date:<input type="text" name="B"></label><br></p><br><h3>HTML5的form如何关闭自动完成功能？</h3><br>  <p>给不想要提示的 form 或某个 input 设置为 autocomplete=off。<br></p><br><h3>如何实现浏览器内多个标签页之间的通信? (阿里)</h3><br>  <p><br>  WebSocket、SharedWorker；<br>  也可以调用localstorge、cookies等本地存储方式；<br><br>  localstorge另一个浏览上下文里被添加、修改或删除时，它都会触发一个事件，<br>  我们通过监听事件，控制它的值来进行页面信息通信；<br>  注意quirks：Safari 在无痕模式下设置localstorge值时会抛出 QuotaExceededError 的异常；<br></p><br><h3>webSocket如何兼容低浏览器？(阿里)</h3><br>  <p><br>  Adobe Flash Socket 、<br>  ActiveX HTMLFile (IE) 、<br>  基于 multipart 编码发送 XHR 、<br>  基于长轮询的 XHR<br></p><br><h3>实现不使用 border 画出1px高的线，在不同浏览器的标准模式与怪异模式下都能保持一致的效果。</h3><br>  <p><br>  # <div style="height:1px;overflow:hidden;background:red"></div><br></p><br><h3>title与h1的区别、b与strong的区别、i与em的区别？</h3><br>  <p><br>  title属性没有明确意义只表示是个标题，H1则表示层次明确的标题，对页面信息的抓取也有很大的影响；<br><br>  strong是标明重点内容，有语气加强的含义，使用阅读设备阅读网络时：<strong>会重读，而<b>是展示强调内容。<br><br>  i内容展示为斜体，em表示强调的文本；<br><br>  Physical Style Elements – 自然样式标签<br>  b, i, u, s, pre<br>  Semantic Style Elements – 语义样式标签<br>  strong, em, ins, del, code<br>  应该准确使用语义样式标签, 但不能滥用, 如果不能确定时首选使用自然样式标签。<br></b></strong></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">blog</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">html</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">first</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">面试题</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://githanlongf.github.io/zhiqiu.github.io/2018/11/03/html-知识/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/zhiqiu.github.io/2018/11/03/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Hello World
+        
+      </div>
+    </a>
   
   
-    </div></section>
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="html-知识" data-title="" data-url="https://githanlongf.github.io/zhiqiu.github.io/zhiqiu.github.io/2018/11/03/html-知识/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -234,9 +362,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
