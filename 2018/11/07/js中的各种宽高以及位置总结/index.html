@@ -8,18 +8,29 @@
   <link rel="dns-prefetch" href="https://githanlongf.github.io/zhiqiu.github.io">
   <title>js中的各种宽高以及位置总结 | 越努力越幸福</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="在javascript中操作dom节点让其运动的时候，常常会涉及到各种宽高以及位置坐标等概念，如果不能很好地理解这些属性所代表的意义，就不能理解js的运动原理，同时，由于这些属性概念较多，加上浏览器之间实现方式不同，常常会造成概念混淆，经过研究之后，这里来进行一个总结。">
+  <meta name="description" content="在javascript中操作dom节点让其运动的时候，常常会涉及到各种宽高以及位置坐标等概念，如果不能很好地理解这些属性所代表的意义，就不能理解js的运动原理">
 <meta property="og:type" content="article">
 <meta property="og:title" content="js中的各种宽高以及位置总结">
 <meta property="og:url" content="https://githanlongf.github.io/zhiqiu.github.io/2018/11/07/js中的各种宽高以及位置总结/index.html">
 <meta property="og:site_name" content="越努力越幸福">
-<meta property="og:description" content="在javascript中操作dom节点让其运动的时候，常常会涉及到各种宽高以及位置坐标等概念，如果不能很好地理解这些属性所代表的意义，就不能理解js的运动原理，同时，由于这些属性概念较多，加上浏览器之间实现方式不同，常常会造成概念混淆，经过研究之后，这里来进行一个总结。">
+<meta property="og:description" content="在javascript中操作dom节点让其运动的时候，常常会涉及到各种宽高以及位置坐标等概念，如果不能很好地理解这些属性所代表的意义，就不能理解js的运动原理">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://github.com/GitHanLongF/MyPostImage/blob/master/InterviewImg/js1.jpg?raw=true">
-<meta property="og:updated_time" content="2018-11-07T03:10:45.790Z">
+<meta property="og:image" content="https://github.com/GitHanLongF/MyPostImage/blob/master/InterviewImg/js2.webp.jpg?raw=true">
+<meta property="og:image" content="https://github.com/GitHanLongF/MyPostImage/blob/master/InterviewImg/js3.jpg?raw=true">
+<meta property="og:image" content="https://github.com/GitHanLongF/MyPostImage/blob/master/InterviewImg/js4.jpg?raw=true">
+<meta property="og:image" content="https://github.com/GitHanLongF/MyPostImage/blob/master/InterviewImg/js5.jpg?raw=true">
+<meta property="og:image" content="https://github.com/GitHanLongF/MyPostImage/blob/master/InterviewImg/js6.jpg?raw=true">
+<meta property="og:image" content="https://github.com/GitHanLongF/MyPostImage/blob/master/InterviewImg/js7.jpg?raw=true">
+<meta property="og:image" content="https://github.com/GitHanLongF/MyPostImage/blob/master/InterviewImg/js8.jpg?raw=true">
+<meta property="og:image" content="https://github.com/GitHanLongF/MyPostImage/blob/master/InterviewImg/js9.jpg?raw=true">
+<meta property="og:image" content="https://github.com/GitHanLongF/MyPostImage/blob/master/InterviewImg/js10.jpg?raw=true">
+<meta property="og:image" content="https://github.com/GitHanLongF/MyPostImage/blob/master/InterviewImg/js11.jpg?raw=true">
+<meta property="og:image" content="https://github.com/GitHanLongF/MyPostImage/blob/master/InterviewImg/js12.jpg?raw=true">
+<meta property="og:updated_time" content="2018-11-07T06:58:08.768Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js中的各种宽高以及位置总结">
-<meta name="twitter:description" content="在javascript中操作dom节点让其运动的时候，常常会涉及到各种宽高以及位置坐标等概念，如果不能很好地理解这些属性所代表的意义，就不能理解js的运动原理，同时，由于这些属性概念较多，加上浏览器之间实现方式不同，常常会造成概念混淆，经过研究之后，这里来进行一个总结。">
+<meta name="twitter:description" content="在javascript中操作dom节点让其运动的时候，常常会涉及到各种宽高以及位置坐标等概念，如果不能很好地理解这些属性所代表的意义，就不能理解js的运动原理">
 <meta name="twitter:image" content="https://github.com/GitHanLongF/MyPostImage/blob/master/InterviewImg/js1.jpg?raw=true">
   
     <link rel="alternative" href="/atom.xml" title="越努力越幸福" type="application/atom+xml">
@@ -176,10 +187,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>在javascript中操作dom节点让其运动的时候，常常会涉及到各种宽高以及位置坐标等概念，如果不能很好地理解这些属性所代表的意义，就不能理解js的运动原理，同时，由于这些属性概念较多，加上浏览器之间实现方式不同，常常会造成概念混淆，经过研究之后，这里来进行一个总结。<a id="more"></a></p>
+        <p>在javascript中操作dom节点让其运动的时候，常常会涉及到各种宽高以及位置坐标等概念，如果不能很好地理解这些属性所代表的意义，就不能理解js的运动原理<a id="more"></a>，同时，由于这些属性概念较多，加上浏览器之间实现方式不同，常常会造成概念混淆，经过研究之后，这里来进行一个总结。</p>
 <h1 id="第一部分-DOM对象"><a href="#第一部分-DOM对象" class="headerlink" title="第一部分:DOM对象"></a>第一部分:DOM对象</h1><blockquote>
-<h4 id="1-1只读属性"><a href="#1-1只读属性" class="headerlink" title="1.1只读属性"></a>1.1只读属性</h4><p>所谓的只读属性指的是DOM节点的固有属性，该属性只能通过js去获取而不能通过js去设置，而且获取的值是只有数字并不带单位的（px,em等），如下：</p>
-</blockquote>
+<h4 id="1-1只读属性"><a href="#1-1只读属性" class="headerlink" title="1.1只读属性"></a>1.1只读属性</h4></blockquote>
+<p>所谓的只读属性指的是DOM节点的固有属性，该属性只能通过js去获取而不能通过js去设置，而且获取的值是只有数字并不带单位的（px,em等），如下：</p>
 <p>1）clientWidth和clientHeight</p>
 <p>该属性指的是元素的可视部分宽度和高度，即padding+content，如果没有滚动条，即为元素设定的高度和宽度，如果出现滚动条，滚动条会遮盖元素的宽高，那么该属性就是其本来宽高减去滚动条的宽高</p>
 <p>css:</p>
@@ -188,7 +199,88 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div class=&quot;one&quot;&gt;</span><br><span class="line">        javascript高级应用&lt;br&gt;</span><br><span class="line">        javascript高级应用&lt;br&gt;</span><br><span class="line">        javascript高级应用&lt;br&gt;</span><br><span class="line">        javascript高级应用&lt;br&gt;</span><br><span class="line">        javascript高级应用&lt;br&gt;</span><br><span class="line">        javascript高级应用&lt;br&gt;</span><br><span class="line">        javascript高级应用&lt;br&gt;</span><br><span class="line">        javascript高级应用&lt;br&gt;</span><br><span class="line">        javascript高级应用&lt;br&gt;</span><br><span class="line">        javascript高级应用&lt;br&gt;</span><br><span class="line">        javascript高级应用&lt;br&gt;</span><br><span class="line">        javascript高级应用&lt;br&gt;</span><br><span class="line">        javascript高级应用&lt;br&gt;</span><br><span class="line">        javascript高级应用&lt;br&gt;</span><br><span class="line">        javascript高级应用&lt;br&gt;</span><br><span class="line">        javascript高级应用&lt;br&gt;</span><br><span class="line">        javascript高级应用&lt;br&gt;</span><br><span class="line">        javascript高级应用&lt;br&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
 <p>js:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    window.onload=function()&#123;</span><br><span class="line">        var oDiv=document.getElementsByTagName(&apos;div&apos;)[0];</span><br><span class="line">        console.log(oDiv.clientWidth+&quot;:&quot;+oDiv.clientHeight);</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-<p>结果：<br><img src="https://github.com/GitHanLongF/MyPostImage/blob/master/InterviewImg/js1.jpg?raw=true" alt="图片"></p>
+<p>结果：</p>
+<p><img src="https://github.com/GitHanLongF/MyPostImage/blob/master/InterviewImg/js1.jpg?raw=true" alt="图片"></p>
+<p>元素本来设定为宽高都是200，即可视部分宽高都是200，但是由于出现了垂直方向的滚动条，占据了可视部分的宽度，所以clientWidth变成了183，而clientHeight依然是200. </p>
+<p>注：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">window.innerWidth - document.body.clientWidth //火狐下17px IE11下17px</span><br><span class="line">滚动条的默认宽为17px</span><br></pre></td></tr></table></figure></p>
+<p>2）offsetWidth和offsetHeight</p>
+<p>这一对属性指的是元素的border+padding+content的宽度和高度，该属性和其内部的内容是否超出元素大小无关，只和本来设定的border以及width和height有关</p>
+<p>css和HTML部分同上，js部分如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    window.onload=function()&#123;</span><br><span class="line">        var oDiv=document.getElementsByTagName(&apos;div&apos;)[0];</span><br><span class="line">        console.log(oDiv.offsetWidth+&quot;:&quot;+oDiv.offsetHeight);</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>最终结果：</p>
+<p><img src="https://github.com/GitHanLongF/MyPostImage/blob/master/InterviewImg/js2.webp.jpg?raw=true" alt="图片"></p>
+<p>可以看到该属性和clientWidth以及clientHeight相比，多了设定的边框border的宽度和高度。</p>
+<p>3）clientTop和clientLeft</p>
+<p>这一对属性是用来读取元素的border的宽度和高度的。</p>
+<p>css：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">    body&#123;</span><br><span class="line">        border: 2px solid #000000;</span><br><span class="line">    &#125;</span><br><span class="line">    .one&#123;</span><br><span class="line">        border: 1px solid red;</span><br><span class="line">        width: 100px;</span><br><span class="line">        height: 100px;</span><br><span class="line">        background: red;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+<p>html:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div class=&quot;one&quot;&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
+<p>js:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    var oDiv=document.getElementsByClassName(&apos;one&apos;)[0];</span><br><span class="line">    console.log(oDiv.clientLeft+&quot;:&quot;+oDiv.clientTop);</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>最终结果：</p>
+<p><img src="https://github.com/GitHanLongF/MyPostImage/blob/master/InterviewImg/js3.jpg?raw=true" alt="图片"></p>
+<p>可以看到div的border被设定了1px的宽，这里显示的就是它的宽度</p>
+<p>4）offsetLeft和offsetTop</p>
+<p>说到这对属性就需要说下offsetParent,所谓offsetParent指的是当前元素的离自己最近的具有定位的（position:absolute或者position：relative）父级元素（不仅仅指的是直接父级元素，只要是它的父元素都可以），该父级元素就是当前元素的offsetParent，如果从该元素向上寻找，找不到这样一个父级元素，那么当前元素的offsetParent就是body元素。而offsetLeft和offsetTop指的是当前元素，相对于其offsetParent左边距离和上边距离，即当前元素的border到包含它的offsetParent的border的距离如下所示：</p>
+<p>css:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">    .two&#123;</span><br><span class="line">        position: relative;</span><br><span class="line">        width: 200px;</span><br><span class="line">        height: 200px;</span><br><span class="line">        border: 1px solid green;</span><br><span class="line">    &#125;</span><br><span class="line">    .one &#123;</span><br><span class="line">        width: 100px;</span><br><span class="line">        height: 100px;</span><br><span class="line">        background: red;</span><br><span class="line">        margin: 20px;</span><br><span class="line">        border: 1px solid #000000;</span><br><span class="line">        position: absolute;</span><br><span class="line">        top:20px;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+<p>HTML:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div class=&quot;two&quot;&gt;</span><br><span class="line">        &lt;div class=&quot;one&quot;&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
+<p>js:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    var oDiv=document.querySelector(&apos;.one&apos;);</span><br><span class="line">    console.log(oDiv.offsetTop+&quot;:&quot;+oDiv.offsetLeft);</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>最终结果：</p>
+<p><img src="https://github.com/GitHanLongF/MyPostImage/blob/master/InterviewImg/js4.jpg?raw=true" alt="图片"></p>
+<p>这里让div.two相对定位，让div.one绝对定位，所以div.two是one的offsetParent,同时，又给div.one加了一个margin为20px,所以这里它的offsetTop为40，offsetLeft 本来为0，但是加上margin为20之后就变成了20.</p>
+<p>5）scrollHeight和scrollWidth</p>
+<p>顾名思义，这两个属性指的是当元素内部的内容超出其宽度和高度的时候，元素内部内容的实际宽度和高度，需要注意的是，当元素其中内容没有超过其高度或者宽度的时候，该属性是取不到的。</p>
+<p>css:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">    .one&#123;</span><br><span class="line">        width: 100px;</span><br><span class="line">        height: 100px;</span><br><span class="line">        overflow: auto;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+<p>HTML:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div class=&quot;one&quot;&gt;</span><br><span class="line">        我是内容&lt;br&gt;</span><br><span class="line">        我是内容&lt;br&gt;</span><br><span class="line">        我是内容&lt;br&gt;</span><br><span class="line">        我是内容&lt;br&gt;</span><br><span class="line">        我是内容&lt;br&gt;</span><br><span class="line">        我是内容&lt;br&gt;</span><br><span class="line">        我是内容&lt;br&gt;</span><br><span class="line">        我是内容&lt;br&gt;</span><br><span class="line">        我是内容&lt;br&gt;</span><br><span class="line">        我是内容&lt;br&gt;</span><br><span class="line">        我是内容&lt;br&gt;</span><br><span class="line">        我是内容&lt;br&gt;</span><br><span class="line">        我是内容&lt;br&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
+<p>js:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    var oDiv=document.querySelector(&apos;.one&apos;);</span><br><span class="line">    oDiv.onscroll=function()&#123;</span><br><span class="line">        console.log(this.scrollHeight+&quot;:&quot;+this.scrollWidth);</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>最终结果</p>
+<p><img src="https://github.com/GitHanLongF/MyPostImage/blob/master/InterviewImg/js5.jpg?raw=true" alt="图片"></p>
+<p>尽管该div的宽高都是100，但是其scrollheight为234显示的是其中内容的实际高度，scrollWidth为83（由于滚动条占据了宽度）</p>
+<p>1.2可读可写属性</p>
+<p>所谓的可读可写属性指的是不仅能通过js获取该属性的值，还能够通过js为该属性赋值。</p>
+<p>1）scrollTop和scrollLeft</p>
+<p>这对属性是可读写的，指的是当元素其中的内容超出其宽高的时候，元素被卷起的高度和宽度。</p>
+<p>css和html部分同上，js部分如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    var oDiv=document.querySelector(&apos;.one&apos;);</span><br><span class="line">    oDiv.onscroll=function()&#123;</span><br><span class="line">        console.log(this.scrollTop+&quot;:&quot;+this.scrollLeft);</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>最终结果：</p>
+<p><img src="https://github.com/GitHanLongF/MyPostImage/blob/master/InterviewImg/js6.jpg?raw=true" alt="图片"></p>
+<p>由于拖动了滚动条，scrollTop的属性值一直在增大，而水平方向没有滚动条，所以scrollLeft一直为0.</p>
+<p>该属性还可以通过赋值内容自动滚动到某个位置，js如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    var oDiv=document.querySelector(&apos;.one&apos;);</span><br><span class="line">    oDiv.scrollTop=20;</span><br><span class="line">    oDiv.onscroll=function()&#123;</span><br><span class="line">        console.log(this.scrollTop+&quot;:&quot;+this.scrollLeft);</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>结果如下：</p>
+<p><img src="https://github.com/GitHanLongF/MyPostImage/blob/master/InterviewImg/js7.jpg?raw=true" alt="图片"></p>
+<p>通过直接设定div的scrollTop,让它直接显示在滚动条在20垂直方向上20的位置。</p>
+<p>2）obj.style.*属性</p>
+<p>对于一个dom元素，它的style属性返回的是一个对象，这个对象中的任意一个属性是可读写的。如obj.style.top,obj.style.wdith等，在读的时候，他们返回的值常常是带有单位的(如px),同时，对于这种方式，</p>
+<p>它只能够获取到该元素的行内样式，而并不能获取到该元素最终计算好的样式，这就是在读取属性值得时候和以上只读属性的区别，要获取计算好的样式，请使用obj.currentstyle（IE）和getComputedStyle(IE之外的浏览器)。另一方面，这些属性能够被赋值，js运动的原理就是通过不断修改这些属性的值而达到其位置改变的，需要注意的是，给这些属性赋值的时候需要带单位的要带上单位，否则不生效。</p>
+<p>第二部分 Event对象</p>
+<p>在js中，对于元素的运动的操作通常都会涉及到event对象，而event对象也存在很多位置属性，且由于浏览器兼容性问题会导致这些属性间相互混淆，这里一一讲解。</p>
+<p>1）clientX和clientY，这对属性是当事件发生时，鼠标点击位置相对于浏览器（可视区）的坐标，即浏览器左上角坐标的（0,0），该属性以浏览器左上角坐标为原点，计算鼠标点击位置距离其左上角的位置，</p>
+<p>不管浏览器窗口大小如何变化，都不会影响点击位置的坐标。</p>
+<p>js:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    var oDiv=document.querySelector(&apos;.one&apos;);</span><br><span class="line">    oDiv.onclick=function(ev)&#123;</span><br><span class="line">        var evt=ev||event;</span><br><span class="line">        console.log(evt.clientX+&quot;:&quot;+evt.clientY);  </span><br><span class="line">    &#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>结果：</p>
+<p><img src="https://github.com/GitHanLongF/MyPostImage/blob/master/InterviewImg/js8.jpg?raw=true" alt="图片"></p>
+<p>2）screenX和screenY是事件发生时鼠标相对于屏幕的坐标，以设备屏幕的左上角为原点，事件发生时鼠标点击的地方即为该点的screenX和screenY值，如下所示：</p>
+<p><img src="https://github.com/GitHanLongF/MyPostImage/blob/master/InterviewImg/js9.jpg?raw=true" alt="图片"></p>
+<p>可以看到尽管浏览器窗口被缩到很小，但是坐标值却很大，因为是相对于屏幕坐标而不是浏览器的坐标。</p>
+<p>3）offsetX和offsetY</p>
+<p>这一对属性是指当事件发生时，鼠标点击位置相对于该事件源的位置，即点击该div，以该div左上角为原点来计算鼠标点击位置的坐标，如下所示：</p>
+<p><img src="https://github.com/GitHanLongF/MyPostImage/blob/master/InterviewImg/js10.jpg?raw=true" alt="图片"></p>
+<p>可以看到，点击该div的靠近左上角处，它的offsetX和offsetY为1,0，需要注意的是，IE，chrome，opera都支持该属性，唯独Firefox不支持该属性，Firefox中与此属性相对应的概念是，event.layerX和event.layerY,所以需要兼容浏览器时，获取鼠标点击位置相对于事件源的坐标的兼容写法为var disX=event.offsetX||event.layerX.</p>
+<p>4)pageX和pageY</p>
+<p>顾名思义，该属性是事件发生时鼠标点击位置相对于页面的位置，通常浏览器窗口没有出现滚动条时，该属性和event.clientX及event.clientY是等价的，但是当浏览器出现滚动条的时候，pageX通常会大于clientX，因为页面还存在被卷起来的部分的宽度和高度，如下所示：</p>
+<p><img src="https://github.com/GitHanLongF/MyPostImage/blob/master/InterviewImg/js11.jpg?raw=true" alt="图片"></p>
+<p>由于浏览器出现了垂直和水平的滚动条，所以pageX和pageY大于clientX和clientY。</p>
+<p>当浏览器的滚动条没有被拖动或者浏览器没有滚动条的时候，两者是相等的。</p>
+<p><img src="https://github.com/GitHanLongF/MyPostImage/blob/master/InterviewImg/js12.jpg?raw=true" alt="图片"></p>
 
       
 
