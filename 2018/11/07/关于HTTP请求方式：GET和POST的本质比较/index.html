@@ -6,18 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://githanlongf.github.io/zhiqiu.github.io">
-  <title>越努力越幸福</title>
+  <title>关于HTTP请求方式：GET和POST的本质比较 | 越努力越幸福</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="学习不刻苦,不如卖红薯">
-<meta property="og:type" content="website">
-<meta property="og:title" content="越努力越幸福">
-<meta property="og:url" content="https://githanlongf.github.io/zhiqiu.github.io/index.html">
+  <meta name="description" content="什么是HTTP?超文本传输协议(HyperText Transfer Protocol -- HTTP)是一个设计来使客户端和服务器顺利进行通讯的协议。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于HTTP请求方式：GET和POST的本质比较">
+<meta property="og:url" content="https://githanlongf.github.io/zhiqiu.github.io/2018/11/07/关于HTTP请求方式：GET和POST的本质比较/index.html">
 <meta property="og:site_name" content="越努力越幸福">
-<meta property="og:description" content="学习不刻苦,不如卖红薯">
+<meta property="og:description" content="什么是HTTP?超文本传输协议(HyperText Transfer Protocol -- HTTP)是一个设计来使客户端和服务器顺利进行通讯的协议。">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-11-07T08:45:40.319Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="越努力越幸福">
-<meta name="twitter:description" content="学习不刻苦,不如卖红薯">
+<meta name="twitter:title" content="关于HTTP请求方式：GET和POST的本质比较">
+<meta name="twitter:description" content="什么是HTTP?超文本传输协议(HyperText Transfer Protocol -- HTTP)是一个设计来使客户端和服务器顺利进行通讯的协议。">
   
     <link rel="alternative" href="/atom.xml" title="越努力越幸福" type="application/atom+xml">
   
@@ -153,16 +154,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-关于HTTP请求方式：GET和POST的本质比较" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+            <article id="post-关于HTTP请求方式：GET和POST的本质比较" class="article article-type-post " itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/zhiqiu.github.io/2018/11/07/关于HTTP请求方式：GET和POST的本质比较/">关于HTTP请求方式：GET和POST的本质比较</a>
+    <h1 class="article-title" itemprop="name">
+      关于HTTP请求方式：GET和POST的本质比较
     </h1>
   
 
@@ -176,10 +175,146 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="什么是HTTP"><a href="#什么是HTTP" class="headerlink" title="什么是HTTP?"></a>什么是HTTP?</h2><pre><code>超文本传输协议(HyperText Transfer Protocol -- HTTP)是一个设计来使客户端和服务器顺利进行通讯的协议。
-</code></pre>
-        
+</code></pre><a id="more"></a>
+<pre><code>HTTP在客户端和服务器之间以request-responseprotocol（请求-回复协议）工作。
+</code></pre><h2 id="GET方法："><a href="#GET方法：" class="headerlink" title="GET方法："></a>GET方法：</h2><p>使用GET方法时，查询字符串（键值对）被附加在URL地址后面一起发送到服务器：</p>
+<p>/test/demo_form.jsp?name1=value1&amp;name2=value2</p>
+<p>特点：</p>
+<p>· GET请求能够被缓存</p>
+<p>· GET请求会保存在浏览器的浏览记录中</p>
+<p>· 以GET请求的URL能够保存为浏览器书签</p>
+<p>· GET请求有长度限制</p>
+<p>· GET请求主要用以获取数据    </p>
+<h2 id="POST方法："><a href="#POST方法：" class="headerlink" title="POST方法："></a>POST方法：</h2><p>使用POST方法时，查询字符串在POST信息中单独存在，和HTTP请求一起发送到服务器：</p>
+<p>POST/test/demo_form.jsp HTTP/1.1</p>
+<p>Host:w3schools.com</p>
+<p>name1=value1&amp;name2=value2</p>
+<p>特点：</p>
+<p>· POST请求不能被缓存下来</p>
+<p>· POST请求不会保存在浏览器浏览记录中</p>
+<p>· 以POST请求的URL无法保存为浏览器书签</p>
+<p>· POST请求没有长度限制</p>
+<h2 id="GET和POST的区别："><a href="#GET和POST的区别：" class="headerlink" title="GET和POST的区别："></a>GET和POST的区别：</h2><table>
+<thead>
+<tr>
+<th style="text-align:left"></th>
+<th style="text-align:right">GET</th>
+<th style="text-align:center">POST</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">点击返回/刷新按钮</td>
+<td style="text-align:right">没有影响</td>
+<td style="text-align:center">数据会重新发送（浏览器将会提示用户“数据被从新提交”）</td>
+</tr>
+<tr>
+<td style="text-align:left">添加书签</td>
+<td style="text-align:right">可以</td>
+<td style="text-align:center">不可以</td>
+</tr>
+<tr>
+<td style="text-align:left">缓存</td>
+<td style="text-align:right">可以</td>
+<td style="text-align:center">不可以</td>
+</tr>
+<tr>
+<td style="text-align:left">编码类型(Encoding type)</td>
+<td style="text-align:right">application/x-www-form-urlencoded</td>
+<td style="text-align:center">application/x-www-form-urlencoded or multipart/form-data. 请为二进制数据使用multipart编码</td>
+</tr>
+<tr>
+<td style="text-align:left">历史记录</td>
+<td style="text-align:right">有</td>
+<td style="text-align:center">没有</td>
+</tr>
+<tr>
+<td style="text-align:left">长度限制</td>
+<td style="text-align:right">有</td>
+<td style="text-align:center">没有</td>
+</tr>
+<tr>
+<td style="text-align:left">数据类型限制</td>
+<td style="text-align:right">只允许ASCII字符类型</td>
+<td style="text-align:center">没有限制。允许二进制数据</td>
+</tr>
+<tr>
+<td style="text-align:left">安全性</td>
+<td style="text-align:right">查询字符串会显示在地址栏的URL中，不安全，请不要使用GET请求提交敏感数据</td>
+<td style="text-align:center">因为数据不会显示在地址栏中，也不会缓存下来或保存在浏览记录中，所以看POST求情比GET请求安全，但也不是最安全的方式。如需要传送敏感数据，请使用加密方式传输</td>
+</tr>
+<tr>
+<td style="text-align:left">可见性</td>
+<td style="text-align:right">查询字符串显示在地址栏的URL中，可见</td>
+<td style="text-align:center">查询字符串不会显示在地址栏中，不可见</td>
+</tr>
+</tbody>
+</table>
+<h2 id="其他HTTP请求方式"><a href="#其他HTTP请求方式" class="headerlink" title="其他HTTP请求方式"></a>其他HTTP请求方式</h2><table>
+<thead>
+<tr>
+<th style="text-align:left">方式</th>
+<th style="text-align:right">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">HEAD</td>
+<td style="text-align:right">与GET请求类似，不同在与服务器只返回HTTP头部信息，没有页面内容</td>
+</tr>
+<tr>
+<td style="text-align:left">PUT</td>
+<td style="text-align:right">上传指定URL的描述</td>
+</tr>
+<tr>
+<td style="text-align:left">DELETE</td>
+<td style="text-align:right">删除指定资源</td>
+</tr>
+<tr>
+<td style="text-align:left">OPTIONS</td>
+<td style="text-align:right">返回服务器支持的HTTP方法</td>
+</tr>
+</tbody>
+</table>
+<p>本质上，这些并不是HTTP的GET和POST两者请求的区别，这些区别是建立在HTML标准对于HTTP协议的用法的约定之上的。</p>
+<h2 id="GET和POST与数据如何传递没有关系"><a href="#GET和POST与数据如何传递没有关系" class="headerlink" title="GET和POST与数据如何传递没有关系"></a>GET和POST与数据如何传递没有关系</h2><p>GET和POST是由HTTP协议定义的。在HTTP协议中，Method和Data（URL， Body， Header）是正交的两个概念，也就是说，使用哪个Method与应用层的数据如何传输是没有相互关系的。</p>
+<p>HTTP没有要求，如果Method是POST数据就要放在BODY中。也没有要求，如果Method是GET，数据（参数）就一定要放在URL中而不能放在BODY中。</p>
+<p>那么，网上流传甚广的这个说法是从何而来的呢？我在HTML标准中，找到了相似的描述。这和网上流传的说法一致。但是这只是HTML标准对HTTP协议的用法的约定。怎么能当成GET和POST的区别呢？</p>
+<p>而且，现代的Web Server都是支持GET中包含BODY这样的请求。虽然这种请求不可能从浏览器发出，但是现在的Web Server又不是只给浏览器用，已经完全地超出了HTML服务器的范畴了。</p>
+<ol start="2">
+<li>HTTP协议对GET和POST都没有对长度的限制</li>
+</ol>
+<p>HTTP协议明确地指出了，HTTP头和Body都没有长度的要求。而对于URL长度上的限制，有两方面的原因造成：</p>
+<ol>
+<li><p>浏览器。据说早期的浏览器会对URL长度做限制。据说IE对URL长度会限制在2048个字符内（流传很广，而且无数同事都表示认同）。但我自己试了一下，我构造了90K的URL通过IE9访问live.com，是正常的。网上的东西，哪怕是Wikipedia上的，也不能信。</p>
+</li>
+<li><p>服务器。URL长了，对服务器处理也是一种负担。原本一个会话就没有多少数据，现在如果有人恶意地构造几个几M大小的URL，并不停地访问你的服务器。服务器的最大并发数显然会下降。另一种攻击方式是，把告诉服务器Content-Length是一个很大的数，然后只给服务器发一点儿数据，嘿嘿，服务器你就傻等着去吧。哪怕你有超时设置，这种故意的次次访问超时也能让服务器吃不了兜着走。有鉴于此，多数服务器出于安全啦、稳定啦方面的考虑，会给URL长度加限制。但是这个限制是针对所有HTTP请求的，与GET、POST没有关系。</p>
+</li>
+</ol>
+
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -188,16 +323,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/zhiqiu.github.io/2018/11/07/关于HTTP请求方式：GET和POST的本质比较/">看更多文章 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://githanlongf.github.io/zhiqiu.github.io/2018/11/07/关于HTTP请求方式：GET和POST的本质比较/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/zhiqiu.github.io/2018/11/07/js中常见的数组算法总结/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">js中常见的数组算法总结</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -217,271 +411,34 @@
 
 
 
+  
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="关于HTTP请求方式：GET和POST的本质比较" data-title="关于HTTP请求方式：GET和POST的本质比较" data-url="https://githanlongf.github.io/zhiqiu.github.io/zhiqiu.github.io/2018/11/07/关于HTTP请求方式：GET和POST的本质比较/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
 
   
-    <article id="post-js中常见的数组算法总结" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/zhiqiu.github.io/2018/11/07/js中常见的数组算法总结/">js中常见的数组算法总结</a>
-    </h1>
   
 
-        
-        <a href="/zhiqiu.github.io/2018/11/07/js中常见的数组算法总结/" class="archive-article-date">
-  	<time datetime="2018-11-07T07:14:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="1-费波纳茨数组"><a href="#1-费波纳茨数组" class="headerlink" title="1. 费波纳茨数组"></a>1. 费波纳茨数组</h2><p> 当前项等于前两项的和
-        
-      
-
-      
-    </p></div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/zhiqiu.github.io/2018/11/07/js中常见的数组算法总结/">看更多文章 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-js中的各种宽高以及位置总结" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/zhiqiu.github.io/2018/11/07/js中的各种宽高以及位置总结/">js中的各种宽高以及位置总结</a>
-    </h1>
   
 
-        
-        <a href="/zhiqiu.github.io/2018/11/07/js中的各种宽高以及位置总结/" class="archive-article-date">
-  	<time datetime="2018-11-07T02:13:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>在javascript中操作dom节点让其运动的时候，常常会涉及到各种宽高以及位置坐标等概念，如果不能很好地理解这些属性所代表的意义，就不能理解js的运动原理
-        
-      
-
-      
-    </p></div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/zhiqiu.github.io/2018/11/07/js中的各种宽高以及位置总结/">看更多文章 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/zhiqiu.github.io/2018/11/03/hello-world/">Hello World</a>
-    </h1>
   
 
-        
-        <a href="/zhiqiu.github.io/2018/11/03/hello-world/" class="archive-article-date">
-  	<time datetime="2018-11-03T08:05:28.759Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first
-        
-      
-
-      
-    </p></div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/zhiqiu.github.io/2018/11/03/hello-world/">看更多文章 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-html-知识" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/zhiqiu.github.io/2018/11/03/html-知识/">html常见问题</a>
-    </h1>
-  
-
-        
-        <a href="/zhiqiu.github.io/2018/11/03/html-知识/" class="archive-article-date">
-  	<time datetime="2018-11-02T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h1><h2 id="Doctype作用？标准模式与兼容模式各有什么区别"><a href="#Doctype作用？标准模式与兼容模式各有什么区别" class="headerlink" title="Doctype作用？标准模式与兼容模式各有什么区别?"></a>Doctype作用？标准模式与兼容模式各有什么区别?</h2><p>（1）、&lt;!DOCTYPE&gt;声明位于HTML文档中的第一行，处于 <code>&lt;html&gt;</code> 标签之前。告知
-        
-      
-
-      
-    </p></div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">html</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/zhiqiu.github.io/2018/11/03/html-知识/">看更多文章 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
 
 
@@ -508,8 +465,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
