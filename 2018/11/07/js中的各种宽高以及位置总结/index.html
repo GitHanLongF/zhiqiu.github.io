@@ -27,7 +27,7 @@
 <meta property="og:image" content="https://github.com/GitHanLongF/MyPostImage/blob/master/InterviewImg/js10.jpg?raw=true">
 <meta property="og:image" content="https://github.com/GitHanLongF/MyPostImage/blob/master/InterviewImg/js11.jpg?raw=true">
 <meta property="og:image" content="https://github.com/GitHanLongF/MyPostImage/blob/master/InterviewImg/js12.jpg?raw=true">
-<meta property="og:updated_time" content="2018-11-07T06:58:08.768Z">
+<meta property="og:updated_time" content="2018-11-07T07:10:43.854Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js中的各种宽高以及位置总结">
 <meta name="twitter:description" content="在javascript中操作dom节点让其运动的时候，常常会涉及到各种宽高以及位置坐标等概念，如果不能很好地理解这些属性所代表的意义，就不能理解js的运动原理">
@@ -189,7 +189,8 @@
       
         <p>在javascript中操作dom节点让其运动的时候，常常会涉及到各种宽高以及位置坐标等概念，如果不能很好地理解这些属性所代表的意义，就不能理解js的运动原理<a id="more"></a>，同时，由于这些属性概念较多，加上浏览器之间实现方式不同，常常会造成概念混淆，经过研究之后，这里来进行一个总结。</p>
 <h1 id="第一部分-DOM对象"><a href="#第一部分-DOM对象" class="headerlink" title="第一部分:DOM对象"></a>第一部分:DOM对象</h1><blockquote>
-<h4 id="1-1只读属性"><a href="#1-1只读属性" class="headerlink" title="1.1只读属性"></a>1.1只读属性</h4></blockquote>
+<p>1.1只读属性</p>
+</blockquote>
 <p>所谓的只读属性指的是DOM节点的固有属性，该属性只能通过js去获取而不能通过js去设置，而且获取的值是只有数字并不带单位的（px,em等），如下：</p>
 <p>1）clientWidth和clientHeight</p>
 <p>该属性指的是元素的可视部分宽度和高度，即padding+content，如果没有滚动条，即为元素设定的高度和宽度，如果出现滚动条，滚动条会遮盖元素的宽高，那么该属性就是其本来宽高减去滚动条的宽高</p>
@@ -243,7 +244,9 @@
 <p>最终结果</p>
 <p><img src="https://github.com/GitHanLongF/MyPostImage/blob/master/InterviewImg/js5.jpg?raw=true" alt="图片"></p>
 <p>尽管该div的宽高都是100，但是其scrollheight为234显示的是其中内容的实际高度，scrollWidth为83（由于滚动条占据了宽度）</p>
+<blockquote>
 <p>1.2可读可写属性</p>
+</blockquote>
 <p>所谓的可读可写属性指的是不仅能通过js获取该属性的值，还能够通过js为该属性赋值。</p>
 <p>1）scrollTop和scrollLeft</p>
 <p>这对属性是可读写的，指的是当元素其中的内容超出其宽高的时候，元素被卷起的高度和宽度。</p>
