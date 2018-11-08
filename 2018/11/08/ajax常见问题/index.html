@@ -6,20 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://githanlongf.github.io/zhiqiu.github.io">
-  <title>html常见问题 | 越努力越幸福</title>
+  <title>ajax常见问题 | 越努力越幸福</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="HTMLDoctype作用？标准模式与兼容模式各有什么区别?（1）、&amp;lt;!DOCTYPE&amp;gt;声明位于HTML文档中的第一行，处于 &amp;lt;html&amp;gt; 标签之前。告知">
-<meta name="keywords" content="html">
+  <meta name="description" content="本文主要介绍了ajax基本概念、ajax请求有几个步骤、ajax几种请求方式已经它们各自的优缺点、什么情况下造成跨域、">
 <meta property="og:type" content="article">
-<meta property="og:title" content="html常见问题">
-<meta property="og:url" content="https://githanlongf.github.io/zhiqiu.github.io/2018/11/03/html-知识/index.html">
+<meta property="og:title" content="ajax常见问题">
+<meta property="og:url" content="https://githanlongf.github.io/zhiqiu.github.io/2018/11/08/ajax常见问题/index.html">
 <meta property="og:site_name" content="越努力越幸福">
-<meta property="og:description" content="HTMLDoctype作用？标准模式与兼容模式各有什么区别?（1）、&amp;lt;!DOCTYPE&amp;gt;声明位于HTML文档中的第一行，处于 &amp;lt;html&amp;gt; 标签之前。告知">
+<meta property="og:description" content="本文主要介绍了ajax基本概念、ajax请求有几个步骤、ajax几种请求方式已经它们各自的优缺点、什么情况下造成跨域、">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-07T02:35:50.846Z">
+<meta property="og:updated_time" content="2018-11-08T08:11:56.375Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="html常见问题">
-<meta name="twitter:description" content="HTMLDoctype作用？标准模式与兼容模式各有什么区别?（1）、&amp;lt;!DOCTYPE&amp;gt;声明位于HTML文档中的第一行，处于 &amp;lt;html&amp;gt; 标签之前。告知">
+<meta name="twitter:title" content="ajax常见问题">
+<meta name="twitter:description" content="本文主要介绍了ajax基本概念、ajax请求有几个步骤、ajax几种请求方式已经它们各自的优缺点、什么情况下造成跨域、">
   
     <link rel="alternative" href="/atom.xml" title="越努力越幸福" type="application/atom+xml">
   
@@ -161,97 +160,58 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-html-知识" class="article article-type-post " itemscope="" itemprop="blogPost">
+            <article id="post-ajax常见问题" class="article article-type-post " itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      html常见问题
+      ajax常见问题
     </h1>
   
 
         
-        <a href="/zhiqiu.github.io/2018/11/03/html-知识/" class="archive-article-date">
-  	<time datetime="2018-11-02T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-03</time>
+        <a href="/zhiqiu.github.io/2018/11/08/ajax常见问题/" class="archive-article-date">
+  	<time datetime="2018-11-08T07:32:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-08</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h1><h2 id="Doctype作用？标准模式与兼容模式各有什么区别"><a href="#Doctype作用？标准模式与兼容模式各有什么区别" class="headerlink" title="Doctype作用？标准模式与兼容模式各有什么区别?"></a>Doctype作用？标准模式与兼容模式各有什么区别?</h2><p>（1）、&lt;!DOCTYPE&gt;声明位于HTML文档中的第一行，处于 <code>&lt;html&gt;</code> 标签之前。告知 <a id="more"></a>浏览器的解析器用什么文档标准解析这个文档。DOCTYPE不存在或格式不正确会导致文档以兼容模式呈现。 （2）、标准模式的排版 和JS运作模式都是以该浏览器支持的最高标准运行。在兼容模式中，页面以宽松的向后兼容的方式显示,模拟老式浏览器的行为以防止站点无法工作。</p>
-<h2 id="HTML5-为什么只需要写-lt-DOCTYPE-HTML-gt-？"><a href="#HTML5-为什么只需要写-lt-DOCTYPE-HTML-gt-？" class="headerlink" title="HTML5 为什么只需要写&lt;!DOCTYPE HTML&gt;？"></a>HTML5 为什么只需要写<code>&lt;!DOCTYPE HTML&gt;</code>？</h2><p>HTML5 不基于 SGML，因此不需要对DTD进行引用，但是需要doctype来规范浏览器的行为（让浏览器按照它们应该的方式来运行）；而HTML4.01基于SGML,所以需要对DTD进行引用，才能告知浏览器文档所使用的文档类型。</p>
-<h2 id="行内元素有哪些？块级元素有哪些？-空-void-元素有那些？"><a href="#行内元素有哪些？块级元素有哪些？-空-void-元素有那些？" class="headerlink" title="行内元素有哪些？块级元素有哪些？ 空(void)元素有那些？"></a>行内元素有哪些？块级元素有哪些？ 空(void)元素有那些？</h2><p>首先：CSS规范规定，每个元素都有display属性，确定该元素的类型，每个元素都有默认的display值，如div的display默认值为“block”，则为“块级”元素；span默认display属性值为“inline”，是“行内”元素。</p>
-<p>  （1）行内元素有：a b span img input select strong（强调的语气）<br>  （2）块级元素有：div ul ol li dl dt dd h1 h2 h3 h4…p</p>
-<p>  不同浏览器（版本）、HTML4（5）、CSS2等实际略有差异<br>  参考: <a href="http://stackoverflow.com/questions/6867254/browsers-default-css-for-html-elements" target="_blank" rel="noopener">http://stackoverflow.com/questions/6867254/browsers-default-css-for-html-elements</a></p>
-<h2 id="页面导入样式时，使用link和-import有什么区别？"><a href="#页面导入样式时，使用link和-import有什么区别？" class="headerlink" title="页面导入样式时，使用link和@import有什么区别？"></a>页面导入样式时，使用link和@import有什么区别？</h2><p>  （1）link属于XHTML标签，除了加载CSS外，还能用于定义RSS, 定义rel连接属性等作用；而@import是CSS提供的，只能用于加载CSS;</p>
-<p>  （2）页面被加载的时，link会同时被加载，而@import引用的CSS会等到页面被加载完再加载;</p>
-<p>  （3）import是CSS2.1 提出的，只在IE5以上才能被识别，而link是XHTML标签，无兼容问题;</p>
-<p>  （4）link支持使用js控制DOM去改变样式，而@import不支持;</p>
-<h2 id="介绍一下你对浏览器内核的理解？"><a href="#介绍一下你对浏览器内核的理解？" class="headerlink" title="介绍一下你对浏览器内核的理解？"></a>介绍一下你对浏览器内核的理解？</h2><p>主要分成两部分：渲染引擎(layout engineer或Rendering Engine)和JS引擎。<br>  渲染引擎：负责取得网页的内容（HTML、XML、图像等等）、整理讯息（例如加入CSS等），以及计算网页的显示方式，然后会输出至显示器或打印机。浏览器的内核的不同对于网页的语法解释会有不同，所以渲染的效果也不相同。所有网页浏览器、电子邮件客户端以及其它需要编辑、显示网络内容的应用程序都需要内核。</p>
-<p>  JS引擎则：解析和执行javascript来实现网页的动态效果。</p>
-<p>  最开始渲染引擎和JS引擎并没有区分的很明确，后来JS引擎越来越独立，内核就倾向于只指渲染引擎。</p>
-<h2 id="常见的浏览器内核有哪些？"><a href="#常见的浏览器内核有哪些？" class="headerlink" title="常见的浏览器内核有哪些？"></a>常见的浏览器内核有哪些？</h2><p>Trident内核：IE,MaxThon,TT,The World,360,搜狗浏览器等。[又称MSHTML]<br>  Gecko内核：Netscape6及以上版本，FF,MozillaSuite/SeaMonkey等<br>  Presto内核：Opera7及以上。      [Opera内核原为：Presto，现为：Blink;]<br>  Webkit内核：Safari,Chrome等。   [ Chrome的：Blink（WebKit的分支）]</p>
-<p>详细文章：<a href="http://www.cnblogs.com/fullhouse/archive/2011/12/19/2293455.html" target="_blank" rel="noopener">浏览器内核的解析和对比</a></p>
-<h2 id="html5有哪些新特性、移除了那些元素？如何处理HTML5新标签的浏览器兼容问题？如何区分-HTML-和-HTML5？"><a href="#html5有哪些新特性、移除了那些元素？如何处理HTML5新标签的浏览器兼容问题？如何区分-HTML-和-HTML5？" class="headerlink" title="html5有哪些新特性、移除了那些元素？如何处理HTML5新标签的浏览器兼容问题？如何区分 HTML 和 HTML5？"></a>html5有哪些新特性、移除了那些元素？如何处理HTML5新标签的浏览器兼容问题？如何区分 HTML 和 HTML5？</h2><p>HTML5 现在已经不是 SGML 的子集，主要是关于图像，位置，存储，多任务等功能的增加。<br>        绘画 canvas;<br>        用于媒介回放的 video 和 audio 元素;<br>        本地离线存储 localStorage 长期存储数据，浏览器关闭后数据不丢失;<br>        sessionStorage 的数据在浏览器关闭后自动删除;<br>        语意化更好的内容元素，比如 article、footer、header、nav、section;<br>        表单控件，calendar、date、time、email、url、search;<br>        新的技术webworker, websocket, Geolocation;</p>
+        <p>本文主要介绍了ajax基本概念、ajax请求有几个步骤、ajax几种请求方式已经它们各自的优缺点、什么情况下造成跨域、<a id="more"></a></p>
+<h2 id="1-什么是ajax？ajax作用是什么？"><a href="#1-什么是ajax？ajax作用是什么？" class="headerlink" title="1 :什么是ajax？ajax作用是什么？"></a>1 :什么是ajax？ajax作用是什么？</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">异步的javascript和xml  </span><br><span class="line"></span><br><span class="line">AJAX 是一种用于创建快速动态网页的技术。  </span><br><span class="line"></span><br><span class="line">ajax用来与后台交互</span><br></pre></td></tr></table></figure>
+<h2 id="2-原生js-ajax请求有几个步骤？分别是什么"><a href="#2-原生js-ajax请求有几个步骤？分别是什么" class="headerlink" title="2: 原生js ajax请求有几个步骤？分别是什么"></a>2: 原生js ajax请求有几个步骤？分别是什么</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">//创建 XMLHttpRequest 对象</span><br><span class="line">var ajax = new XMLHttpRequest();</span><br><span class="line">//规定请求的类型、URL 以及是否异步处理请求。</span><br><span class="line">ajax.open(&apos;GET&apos;,url,true);</span><br><span class="line">//发送信息至服务器时内容编码类型</span><br><span class="line">ajax.setRequestHeader(&quot;Content-type&quot;, &quot;application/x-www-form-urlencoded&quot;); </span><br><span class="line">//发送请求</span><br><span class="line">ajax.send(null);  </span><br><span class="line">//接受服务器响应数据</span><br><span class="line">ajax.onreadystatechange = function () &#123;</span><br><span class="line">    if (obj.readyState == 4 &amp;&amp; (obj.status == 200 || obj.status == 304)) &#123; </span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="3-json字符串转换集json对象、json对象转换json字符串"><a href="#3-json字符串转换集json对象、json对象转换json字符串" class="headerlink" title="3: json字符串转换集json对象、json对象转换json字符串"></a>3: json字符串转换集json对象、json对象转换json字符串</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//字符串转对象</span><br><span class="line">JSON.parse(json)</span><br><span class="line">eval(&apos;(&apos; + jsonstr + &apos;)&apos;)   </span><br><span class="line">// 对象转字符串</span><br><span class="line">JSON.stringify(json)</span><br></pre></td></tr></table></figure>
+<h2 id="4-ajax几种请求方式？他们的优缺点？"><a href="#4-ajax几种请求方式？他们的优缺点？" class="headerlink" title="4:ajax几种请求方式？他们的优缺点？"></a>4:ajax几种请求方式？他们的优缺点？</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">常用的post,get,delete。不常用copy、head、link等等。</span><br><span class="line"></span><br><span class="line">1:get通过url传递参数</span><br><span class="line">2:post设置请求头  规定请求数据类型</span><br><span class="line">###使用上的区别</span><br><span class="line">1:post比get安全</span><br><span class="line">(因为post参数在请求体中。get参数在url上面)</span><br><span class="line">2:get传输速度比post快 根据传参决定的。</span><br><span class="line">(post通过请求体传参，后台通过数据流接收。速度稍微慢一些。而get通过url传参可以直接获取)</span><br><span class="line">3:post传输文件大理论没有限制  get传输文件小大概7-8k ie4k左右</span><br><span class="line">4:get获取数据	post上传数据</span><br><span class="line">(上传的数据比较多  而且上传数据都是重要数据。所以不论在安全性还是数据量级 post是最好的选择)</span><br></pre></td></tr></table></figure>
+<h2 id="5-什么情况造成跨域？"><a href="#5-什么情况造成跨域？" class="headerlink" title="5:什么情况造成跨域？"></a>5:什么情况造成跨域？</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">同源策略限制 不同源会造成跨域。以下任意一种情况不同，都是不同源。</span><br><span class="line"></span><br><span class="line">http://www.baidu.com/8080/index.html</span><br><span class="line"></span><br><span class="line">| http:// | POST |</span><br><span class="line">| :------| ------: |</span><br><span class="line">| www | 子域名不同 | </span><br><span class="line">| baidu.com | 主域名不同 | </span><br><span class="line">| 8080 | 端口号不同 | </span><br><span class="line">| www.baidu.com | ip地址和网址不同 |</span><br></pre></td></tr></table></figure>
+<h2 id="6-跨域解决方案有哪些？"><a href="#6-跨域解决方案有哪些？" class="headerlink" title="6:跨域解决方案有哪些？"></a>6:跨域解决方案有哪些？</h2><h3 id="1-jsonp-只能解决get跨域-问的最多"><a href="#1-jsonp-只能解决get跨域-问的最多" class="headerlink" title="1:jsonp 只能解决get跨域(问的最多)"></a>1:jsonp 只能解决get跨域(问的最多)</h3><ul>
+<li>原理：</li>
+</ul>
+<p>动态创建一个script标签。利用script标签的src属性不受同源策略限制。因为所有的src属性和href属性都不受同源策略限制。可以请求第三方服务器数据内容。</p>
 <ul>
-<li><p>移除的元素：</p>
-<pre><code>纯表现的元素：basefont，big，center，font, s，strike，tt，u;
-对可用性产生负面影响的元素：frame，frameset，noframes；
-</code></pre></li>
-<li><p>支持HTML5新标签：<br>   IE8/IE7/IE6支持通过document.createElement方法产生的标签，</p>
-<pre><code>可以利用这一特性让这些浏览器支持HTML5新标签，
-浏览器支持新标签后，还需要添加标签默认的样式。
-</code></pre><p>   当然也可以直接使用成熟的框架、比如html5shim;</p>
-   <!--[if lt IE 9]>
-      <script> src="http://html5shim.googlecode.com/svn/trunk/html5.js"</script>
-   <![endif]-->
-</li>
-<li><p>如何区分HTML5： DOCTYPE声明\新增的结构元素\功能元素</p>
-</li>
+<li>步骤：</li>
 </ul>
-<h2 id="简述一下你对HTML语义化的理解？"><a href="#简述一下你对HTML语义化的理解？" class="headerlink" title="简述一下你对HTML语义化的理解？"></a>简述一下你对HTML语义化的理解？</h2><p>  用正确的标签做正确的事情。<br>  html语义化让页面的内容结构化，结构更清晰，便于对浏览器、搜索引擎解析;<br>  即使在没有样式CSS情况下也以一种文档格式显示，并且是容易阅读的;<br>  搜索引擎的爬虫也依赖于HTML标记来确定上下文和各个关键字的权重，利于SEO;<br>  使阅读源代码的人对网站更容易将网站分块，便于阅读维护理解。</p>
-<h2 id="HTML5的离线储存怎么使用，工作原理能不能解释一下？"><a href="#HTML5的离线储存怎么使用，工作原理能不能解释一下？" class="headerlink" title="HTML5的离线储存怎么使用，工作原理能不能解释一下？"></a>HTML5的离线储存怎么使用，工作原理能不能解释一下？</h2><p>  在用户没有与因特网连接时，可以正常访问站点或应用，在用户与因特网连接时，更新用户机器上的缓存文件。<br>  原理：HTML5的离线存储是基于一个新建的.appcache文件的缓存机制(不是存储技术)，通过这个文件上的解析清单离线存储资源，这些资源就会像cookie一样被存储了下来。之后当网络在处于离线状态下时，浏览器会通过被离线存储的数据进行页面展示。</p>
-<h3 id="如何使用："><a href="#如何使用：" class="headerlink" title="如何使用："></a>如何使用：</h3><p>  1、页面头部像下面一样加入一个manifest的属性；<br>  2、在cache.manifest文件的编写离线存储的资源；<br>       CACHE MANIFEST</p>
-<pre><code>  #v0.11
-CACHE:
-  js/app.js
-  css/style.css
-  NETWORK:
-  resourse/logo.png
-  FALLBACK:
-</code></pre><p>  3、在离线状态时，操作window.applicationCache进行需求实现。</p>
-<h2 id="浏览器是怎么对HTML5的离线储存资源进行管理和加载的呢？"><a href="#浏览器是怎么对HTML5的离线储存资源进行管理和加载的呢？" class="headerlink" title="浏览器是怎么对HTML5的离线储存资源进行管理和加载的呢？"></a>浏览器是怎么对HTML5的离线储存资源进行管理和加载的呢？</h2><p>  在线的情况下，浏览器发现html头部有manifest属性，它会请求manifest文件，如果是第一次访问app，那么浏览器就会根据manifest文件的内容下载相应的资源并且进行离线存储。如果已经访问过app并且资源已经离线存储了，那么浏览器就会使用离线的资源加载页面，然后浏览器会对比新的manifest文件与旧的manifest文件，如果文件没有发生改变，就不做任何操作，如果文件改变了，那么就会重新下载文件中的资源并进行离线存储。<br>  离线的情况下，浏览器就直接使用离线存储的资源。</p>
-<h2 id="请描述一下-cookies，sessionStorage-和-localStorage-的区别？"><a href="#请描述一下-cookies，sessionStorage-和-localStorage-的区别？" class="headerlink" title="请描述一下 cookies，sessionStorage 和 localStorage 的区别？"></a>请描述一下 cookies，sessionStorage 和 localStorage 的区别？</h2><p>  cookie是网站为了标示用户身份而储存在用户本地终端（Client Side）上的数据（通常经过加密）。<br>  cookie数据始终在同源的http请求中携带（即使不需要），记会在浏览器和服务器间来回传递。<br>  sessionStorage和localStorage不会自动把数据发给服务器，仅在本地保存。</p>
-<p>  存储大小：<br>      cookie数据大小不能超过4k。<br>      sessionStorage和localStorage 虽然也有存储大小的限制，但比cookie大得多，可以达到5M或更大。</p>
-<p>  有期时间：<br>      localStorage    存储持久数据，浏览器关闭后数据不丢失除非主动删除数据；<br>      sessionStorage  数据在当前浏览器窗口关闭后自动删除。<br>      cookie          设置的cookie过期时间之前一直有效，即使窗口或浏览器关闭</p>
-<h2 id="iframe有那些缺点？"><a href="#iframe有那些缺点？" class="headerlink" title="iframe有那些缺点？"></a>iframe有那些缺点？</h2><ul>
-<li>iframe会阻塞主页面的Onload事件；</li>
-<li><p>搜索引擎的检索程序无法解读这种页面，不利于SEO;</p>
-</li>
-<li><p>iframe和主页面共享连接池，而浏览器对相同域的连接有限制，所以会影响页面的并行加载。</p>
-</li>
-<li><p>使用iframe之前需要考虑这两个缺点。如果需要使用iframe，最好是通过javascript<br>动态给iframe添加src属性值，这样可以绕开以上两个问题。</p>
-</li>
+<ol>
+<li>去创建一个script标签</li>
+<li>script的src属性设置接口地址</li>
+<li>接口参数,必须要带一个自定义函数名 要不然后台无法返回数据。</li>
+<li>通过定义函数名去接收后台返回数据</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">//去创建一个script标签</span><br><span class="line">var  script = document.createElement(&quot;script&quot;);</span><br><span class="line">//script的src属性设置接口地址 并带一个callback回调函数名称</span><br><span class="line">script.src = &quot;http://127.0.0.1:8888/index.php?callback=jsonpCallback&quot;;</span><br><span class="line">//插入到页面</span><br><span class="line">document.head.appendChild(script);</span><br><span class="line">//通过定义函数名去接收后台返回数据</span><br><span class="line">function jsonpCallback(data)&#123;</span><br><span class="line">    //注意  jsonp返回的数据是json对象可以直接使用</span><br><span class="line">    //ajax  取得数据是json字符串需要转换成json对象才可以使用。</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="2-CORS：跨域资源共享"><a href="#2-CORS：跨域资源共享" class="headerlink" title="2:CORS：跨域资源共享"></a>2:CORS：跨域资源共享</h3><ul>
+<li>原理：服务器设置Access-Control-Allow-OriginHTTP响应头之后，浏览器将会允许跨域请求</li>
+<li>限制：浏览器需要支持HTML5，可以支持POST，PUT等方法兼容ie9以上</li>
 </ul>
-<h2 id="Label的作用是什么？是怎么用的？"><a href="#Label的作用是什么？是怎么用的？" class="headerlink" title="Label的作用是什么？是怎么用的？"></a>Label的作用是什么？是怎么用的？</h2><p>  label标签来定义表单控制间的关系,当用户选择该标签时，浏览器会自动将焦点转到和标签相关的表单控件上。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;label for=&quot;Name&quot;&gt;Number:&lt;/label&gt;</span><br><span class="line">&lt;input type=“text“name=&quot;Name&quot; id=&quot;Name&quot;/&gt;</span><br><span class="line">&lt;label&gt;Date:&lt;input type=&quot;text&quot; name=&quot;B&quot;/&gt;&lt;/label&gt;</span><br></pre></td></tr></table></figure>
-<h2 id="HTML5的form如何关闭自动完成功能？"><a href="#HTML5的form如何关闭自动完成功能？" class="headerlink" title="HTML5的form如何关闭自动完成功能？"></a>HTML5的form如何关闭自动完成功能？</h2><p>  给不想要提示的 form 或某个 input 设置为 autocomplete=off。</p>
-<h2 id="如何实现浏览器内多个标签页之间的通信-阿里"><a href="#如何实现浏览器内多个标签页之间的通信-阿里" class="headerlink" title="如何实现浏览器内多个标签页之间的通信? (阿里)"></a>如何实现浏览器内多个标签页之间的通信? (阿里)</h2><p>  WebSocket、SharedWorker；<br>  也可以调用localstorge、cookies等本地存储方式；</p>
-<p>  localstorge另一个浏览上下文里被添加、修改或删除时，它都会触发一个事件，<br>  我们通过监听事件，控制它的值来进行页面信息通信；<br>  注意quirks：Safari 在无痕模式下设置localstorge值时会抛出 QuotaExceededError 的异常；</p>
-<h2 id="webSocket如何兼容低浏览器？-阿里"><a href="#webSocket如何兼容低浏览器？-阿里" class="headerlink" title="webSocket如何兼容低浏览器？(阿里)"></a>webSocket如何兼容低浏览器？(阿里)</h2><ul>
-<li>Adobe Flash Socket 、</li>
-<li>ActiveX HTMLFile (IE) 、</li>
-<li>基于 multipart 编码发送 XHR 、</li>
-<li>基于长轮询的 XHR</li>
-</ul>
-<h2 id="实现不使用-border-画出1px高的线，在不同浏览器的标准模式与怪异模式下都能保持一致的效果。"><a href="#实现不使用-border-画出1px高的线，在不同浏览器的标准模式与怪异模式下都能保持一致的效果。" class="headerlink" title="实现不使用 border 画出1px高的线，在不同浏览器的标准模式与怪异模式下都能保持一致的效果。"></a>实现不使用 border 画出1px高的线，在不同浏览器的标准模式与怪异模式下都能保持一致的效果。</h2><p>  <code>&lt;div style=&quot;height:1px;overflow:hidden;background:red&quot;&gt;</code></p>
-<h2 id="title与h1的区别、b与strong的区别、i与em的区别？"><a href="#title与h1的区别、b与strong的区别、i与em的区别？" class="headerlink" title="title与h1的区别、b与strong的区别、i与em的区别？"></a>title与h1的区别、b与strong的区别、i与em的区别？</h2><p>  title属性没有明确意义只表示是个标题，H1则表示层次明确的标题，对页面信息的抓取也有很大的影响；</p>
-<p>  strong是标明重点内容，有语气加强的含义，使用阅读设备阅读网络时：<code>&lt;strong&gt;</code> 会重读，而<b>是展示强调内容。</b></p>
-<p>  i内容展示为斜体，em表示强调的文本；</p>
-<p>  Physical Style Elements – 自然样式标签<br>  b, i, u, s, pre<br>  Semantic Style Elements – 语义样式标签<br>  strong, em, ins, del, code<br>  应该准确使用语义样式标签, 但不能滥用, 如果不能确定时首选使用自然样式标签。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">需要后台设置</span><br><span class="line">Access-Control-Allow-Origin: *              //允许所有域名访问，或者</span><br><span class="line">Access-Control-Allow-Origin: http://a.com   //只允许所有域名访问</span><br></pre></td></tr></table></figure>
+<h3 id="3-设置-document-domain"><a href="#3-设置-document-domain" class="headerlink" title="3:设置 document.domain"></a>3:设置 document.domain</h3><p>原理：相同主域名不同子域名下的页面，可以设置document.domain让它们同域</p>
+<p>限制：同域document提供的是页面间的互操作，需要载入iframe页面</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">// URL http://a.com/foo</span><br><span class="line">var ifr = document.createElement(&apos;iframe&apos;);</span><br><span class="line">ifr.src = &apos;http://b.a.com/bar&apos;; </span><br><span class="line">ifr.onload = function()&#123;</span><br><span class="line">    var ifrdoc = ifr.contentDocument || ifr.contentWindow.document;</span><br><span class="line">    ifrdoc.getElementsById(&quot;foo&quot;).innerHTML);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">ifr.style.display = &apos;none&apos;;</span><br><span class="line">document.body.appendChild(ifr);</span><br></pre></td></tr></table></figure>
+<h3 id="4-用Apache做转发（逆向代理），让跨域变成同域"><a href="#4-用Apache做转发（逆向代理），让跨域变成同域" class="headerlink" title="4:用Apache做转发（逆向代理），让跨域变成同域"></a>4:用Apache做转发（逆向代理），让跨域变成同域</h3><h2 id="7-http常见状态码有哪些？"><a href="#7-http常见状态码有哪些？" class="headerlink" title="7: http常见状态码有哪些？"></a>7: http常见状态码有哪些？</h2><h3 id="一-2开头状态码"><a href="#一-2开头状态码" class="headerlink" title="一: 2开头状态码"></a>一: 2开头状态码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">2xx (成功)表示成功处理了请求的状态代码</span><br><span class="line"></span><br><span class="line">200 (成功) 服务器已成功处理了请求。 通常。</span><br></pre></td></tr></table></figure>
+<h3 id="二-3开头状态码"><a href="#二-3开头状态码" class="headerlink" title="二: 3开头状态码"></a>二: 3开头状态码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">3xx (重定向) 表示要完成请求，需要进一步操作。 通常，这些状态代码用来重定向。</span><br><span class="line"></span><br><span class="line">304 (未修改) 自从上次请求后，请求的网页未修改过。 服务器返回此响应时，不会返回网页内容。</span><br></pre></td></tr></table></figure>
+<h3 id="三-4开头状态码"><a href="#三-4开头状态码" class="headerlink" title="三: 4开头状态码"></a>三: 4开头状态码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">4xx(请求错误) 这些状态代码表示请求可能出错，妨碍了服务器的处理</span><br><span class="line"></span><br><span class="line">1:400 (错误请求) 服务器不理解请求的语法。</span><br><span class="line"> </span><br><span class="line">2:403 (禁止) 服务器拒绝请求。</span><br><span class="line"></span><br><span class="line">3:404 (未找到) 服务器找不到请求的网页。</span><br></pre></td></tr></table></figure>
+<h3 id="四-4开头状态码"><a href="#四-4开头状态码" class="headerlink" title="四: 4开头状态码"></a>四: 4开头状态码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">5xx(服务器错误)这些状态代码表示服务器在尝试处理请求时发生内部错误。 这些错误可能是服务器本身的错误，而不是请求出错</span><br><span class="line"></span><br><span class="line">500 (服务器内部错误) 服务器遇到错误，无法完成请求。</span><br><span class="line"></span><br><span class="line">501 (尚未实施) 服务器不具备完成请求的功能。 例如，服务器无法识别请求方法时可能会返回此代码。</span><br><span class="line"></span><br><span class="line">502 (错误网关) 服务器作为网关或代理，从上游服务器收到无效响应。</span><br><span class="line"></span><br><span class="line">503 (服务不可用) 服务器目前无法使用(由于超载或停机维护)。 通常，这只是暂时状态。</span><br><span class="line"></span><br><span class="line">504 (网关超时) 服务器作为网关或代理，但是没有及时从上游服务器收到请求。</span><br><span class="line"></span><br><span class="line">505 (HTTP 版本不受支持) 服务器不支持请求中所用的 HTTP 协议版本。</span><br></pre></td></tr></table></figure>
 
       
 
@@ -281,17 +241,6 @@ CACHE:
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">html</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
       
 
       
@@ -342,7 +291,7 @@ CACHE:
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://githanlongf.github.io/zhiqiu.github.io/2018/11/03/html-知识/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://githanlongf.github.io/zhiqiu.github.io/2018/11/08/ajax常见问题/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -356,15 +305,11 @@ CACHE:
   
 <nav id="article-nav">
   
-    <a href="/zhiqiu.github.io/2018/11/03/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Hello World
-        
-      </div>
-    </a>
   
+    <a href="/zhiqiu.github.io/2018/11/07/关于HTTP请求方式：GET和POST的本质比较/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">关于HTTP请求方式：GET和POST的本质比较</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
@@ -390,7 +335,7 @@ CACHE:
   
   <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="html-知识" data-title="html常见问题" data-url="https://githanlongf.github.io/zhiqiu.github.io/zhiqiu.github.io/2018/11/03/html-知识/"></div>
+	<div class="ds-thread" data-thread-key="ajax常见问题" data-title="ajax常见问题" data-url="https://githanlongf.github.io/zhiqiu.github.io/zhiqiu.github.io/2018/11/08/ajax常见问题/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
