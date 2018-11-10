@@ -6,18 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://githanlongf.github.io/zhiqiu.github.io">
-  <title>越努力越幸福</title>
+  <title>45种Javascript注意事项 | 越努力越幸福</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="学习不刻苦,不如卖红薯">
-<meta property="og:type" content="website">
-<meta property="og:title" content="越努力越幸福">
-<meta property="og:url" content="https://githanlongf.github.io/zhiqiu.github.io/index.html">
+  <meta name="description" content="在这篇文章中，我将分享一些JavaScript常用的技巧，窍门和最佳实践。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="45种Javascript注意事项">
+<meta property="og:url" content="https://githanlongf.github.io/zhiqiu.github.io/2018/11/10/45种Javascript注意事项/index.html">
 <meta property="og:site_name" content="越努力越幸福">
-<meta property="og:description" content="学习不刻苦,不如卖红薯">
+<meta property="og:description" content="在这篇文章中，我将分享一些JavaScript常用的技巧，窍门和最佳实践。">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-11-10T08:27:08.390Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="越努力越幸福">
-<meta name="twitter:description" content="学习不刻苦,不如卖红薯">
+<meta name="twitter:title" content="45种Javascript注意事项">
+<meta name="twitter:description" content="在这篇文章中，我将分享一些JavaScript常用的技巧，窍门和最佳实践。">
   
     <link rel="alternative" href="/atom.xml" title="越努力越幸福" type="application/atom+xml">
   
@@ -159,79 +160,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-10道典型的JavaScript问题和代码演示" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+            <article id="post-45种Javascript注意事项" class="article article-type-post " itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/zhiqiu.github.io/2018/11/10/10道典型的JavaScript问题和代码演示/">10道典型的JavaScript问题</a>
-    </h1>
-  
-
-        
-        <a href="/zhiqiu.github.io/2018/11/10/10道典型的JavaScript问题和代码演示/" class="archive-article-date">
-  	<time datetime="2018-11-10T08:31:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>在本文中，我将向您展示10个 JavaScript 技能典型问题以及其相关解决方案
-        
-      
-
-      
-    </p></div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/zhiqiu.github.io/2018/11/10/10道典型的JavaScript问题和代码演示/">看更多文章 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-45种Javascript注意事项" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/zhiqiu.github.io/2018/11/10/45种Javascript注意事项/">45种Javascript注意事项</a>
+    <h1 class="article-title" itemprop="name">
+      45种Javascript注意事项
     </h1>
   
 
@@ -244,28 +180,240 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>在这篇文章中，我将分享一些JavaScript常用的技巧，窍门和最佳实践。
-        
+        <p>在这篇文章中，我将分享一些JavaScript常用的技巧，窍门和最佳实践。<a id="more"></a>不管JavaScript开发者是使用在浏览器/引擎上或者服务器端（SSJS——Service Side JavaScript）JavaScript解释器上，这些他们都是应该知晓的。</p>
+<p>需要注意的是，文章中的代码片段均是在最新的Google Chrome（版本号30）上测试过，它使用V8 JavaScript引擎（V8 3.20.17.15）。</p>
+<p>1、第一个给变量分配值时不要忘了var关键字。</p>
+<p>分配值给未定义的变量将是该变量自动成为全局变量，应该避免全局变量。</p>
+<p>2、使用===而不是==</p>
+<p>==（或!=）操作符在需要时会自动转换变量类型，而===（或!==）则不会执行类型转换。在进行值和类型比较的时候，应首先考虑使用===</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[10] === 10    // is false</span><br><span class="line">[10]  == 10    // is true</span><br><span class="line">&apos;10&apos; == 10     // is true</span><br><span class="line">&apos;10&apos; === 10    // is false</span><br><span class="line">[]   == 0     // is true</span><br><span class="line">[] ===  0     // is false</span><br><span class="line">&apos;&apos; == false   // is true but true == &quot;a&quot; is false</span><br><span class="line">&apos;&apos; ===   false // is false</span><br></pre></td></tr></table></figure>
+<p>3、undefined、null、0、false、NaN、’’（空字符串）都被视为false。</p>
+<p>4、在行尾使用分号</p>
+<p>在行尾使用分号是很好的实践。如果你忘了，也不会得到警告，因为大多数情况下JavaScript解释器会插入分号的。更多关于你为什么要使用分号的细节，可以看看此文：<a href="http://davidwalsh.name/javascript-semicolons" target="_blank" rel="noopener">http://davidwalsh.name/javascript-semicolons</a>.</p>
+<p>5、创建对象构造函数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function Person(firstName, lastName)&#123;</span><br><span class="line">    this.firstName =  firstName;</span><br><span class="line">    this.lastName = lastName;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var Saad = new Person(&quot;Saad&quot;, &quot;Mousliki&quot;);</span><br></pre></td></tr></table></figure>
+<p>6、小心使用typeof、instanceof和constructor</p>
+<p>typeof：不要忘了typeof null返回object，而大多数对象，typeof(Array, Date, and others)也将返回object</p>
+<p>constructor：内部原型属性，可以被覆盖（可以参考：又谈原型对象）</p>
+<p>instanceof：JavaScript的一个用于检查构造函数的原型链的操作符</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var arr = [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;];</span><br><span class="line">typeof arr;   // return &quot;object&quot;</span><br><span class="line">arr  instanceof Array // true</span><br><span class="line">arr.constructor();  //[]</span><br></pre></td></tr></table></figure>
+<p>7、创建一个自执行函数</p>
+<p>这个经常被称为自我调用的匿名函数或者立即调用的函数表达式（IIFE）。当你创建它时，它会自动执行的函数。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">(function()&#123;</span><br><span class="line">    // some private code that will be executed automatically</span><br><span class="line">&#125;)();</span><br><span class="line">(function(a,b)&#123;</span><br><span class="line">    var result = a+b;</span><br><span class="line">    return result;</span><br><span class="line">&#125;)(10,20)</span><br></pre></td></tr></table></figure>
+<p>8、随机获取一个数组项</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var items = [12, 548 , &apos;a&apos; , 2 , 5478 , &apos;foo&apos; , 8852, , &apos;Doe&apos; , 2145 , 119];</span><br><span class="line"></span><br><span class="line">var  randomItem = items[Math.floor(Math.random() * items.length)];</span><br></pre></td></tr></table></figure>
+<p>9、在特定范围内获取一个随机数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x = Math.floor(Math.random() * (max - min + 1)) + min;</span><br></pre></td></tr></table></figure>
+<p>10、从数字0到最大值之间获取一个数字数组</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var numbersArray = [] , max = 100;</span><br><span class="line"></span><br><span class="line">for( var i=1; numbersArray.push(i++) &lt; max;);  // numbers = [0,1,2,3 ... 100]</span><br></pre></td></tr></table></figure>
+<p>11、生成一个随机字符串</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">function generateRandomAlphaNum(len) &#123;</span><br><span class="line">    var rdmstring = &quot;&quot;;</span><br><span class="line">    for( ; rdmString.length &lt; len; rdmString  += Math.random().toString(36).substr(2));</span><br><span class="line">    return  rdmString.substr(0, len);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>12、打乱一个数字数组的元素顺序</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var numbers = [5, 458 , 120 , -215 , 228 , 400 , 122205, -85411];</span><br><span class="line">numbers = numbers.sort(function()&#123; return Math.random() – 0.5&#125;);</span><br><span class="line">/* the array numbers will be equal for example to</span><br><span class="line"></span><br><span class="line">[120, 5, 228, -215, 400, 458, -85411, 122205] */</span><br><span class="line">13、String的trim函数</span><br><span class="line"></span><br><span class="line">String.prototype.trim = function()&#123;return this.replace(/^\s+|\s+$/g, &quot;&quot;);&#125;;</span><br></pre></td></tr></table></figure>
+<p>13、String的trim函数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String.prototype.trim = function()&#123;return this.replace(/^\s+|\s+$/g, &quot;&quot;);&#125;;</span><br></pre></td></tr></table></figure>
+<p>14、将一个数组附加到另一个数组</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var array1 = [12 , &quot;foo&quot; , &#123;name: &quot;Joe&quot;&#125; , -2458];</span><br><span class="line"></span><br><span class="line">var array2 = [&quot;Doe&quot; , 555 , 100];</span><br><span class="line">Array.prototype.push.apply(array1, array2);</span><br><span class="line">/* array1 will be equal to  [12 , &quot;foo&quot; , &#123;name &quot;Joe&quot;&#125; , -2458 , &quot;Doe&quot; , 555 , 100] */</span><br></pre></td></tr></table></figure>
+<p>15、将arguments对象转换成一个数组</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var argArray = Array.prototype.slice.call(arguments);</span><br></pre></td></tr></table></figure>
+<p>16、验证参数是否是number类型</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">function isNumber(n)&#123;</span><br><span class="line">    return !isNaN(parseFloat(n)) &amp;&amp; isFinite(n);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>17、验证参数是否是数组</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">function isArray(obj)&#123;</span><br><span class="line">    return Object.prototype.toString.call(obj) === &apos;[object Array]&apos; ;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>注意，toString()方法被重写，使用这个技巧将得不到期望的结果了。或者可以这样：</p>
+<p>Array.isArray(obj); // 这是一个新的array的方法</p>
+<p>如果你不在使用多重frames的情况下，你还可以使用 instanceof 方法。但如果你有多个上下文，你就会得到错误的结果。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">var myFrame = document.createElement(&apos;iframe&apos;);</span><br><span class="line">document.body.appendChild(myFrame);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">var myArray = window.frames[window.frames.length-1].Array;</span><br><span class="line">var arr = new myArray(a,b,10); // [a,b,10]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">// instanceof will not work correctly, myArray loses his constructor</span><br><span class="line">// constructor is not shared between frames</span><br><span class="line">arr instanceof Array; // false</span><br></pre></td></tr></table></figure>
+<p>18、获取数字数组中的最大值和最小值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var  numbers = [5, 458 , 120 , -215 , 228 , 400 , 122205, -85411];</span><br><span class="line">var maxInNumbers = Math.max.apply(Math, numbers);</span><br><span class="line">var minInNumbers = Math.min.apply(Math, numbers);</span><br></pre></td></tr></table></figure>
+<p>19、清空一个数组</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">   var myArray = [12 , 222 , 1000 ];</span><br><span class="line">1、myArray.length = 0; // myArray will be equal to [].</span><br><span class="line">2、myArray=[]</span><br></pre></td></tr></table></figure>
+<p>20、不要使用delete去删除一个数组项<br>使用 split 而不要使用 delte 来删除数组中的某个项。使用 delete 只是用 undefined 来替换掉原有的项，并不是真正的从数组中删除。不要用如下的方式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var items = [12, 548 ,&apos;a&apos; , 2 , 5478 , &apos;foo&apos; , 8852, , &apos;Doe&apos; ,2154 , 119 ];</span><br><span class="line">items.length; // return 11</span><br><span class="line">delete items[3]; // return true</span><br><span class="line">items.length; // return 11</span><br><span class="line">/* items will be equal to [12, 548, &quot;a&quot;, undefined × 1, 5478, </span><br><span class="line">&quot;foo&quot;, 8852, undefined × 1, &quot;Doe&quot;, 2154, 119]   */</span><br></pre></td></tr></table></figure>
+<p>而是用下列的方式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var items = [12, 548 ,&apos;a&apos; , 2 , 5478 , &apos;foo&apos; , 8852, , &apos;Doe&apos; ,2154 , 119 ];</span><br><span class="line">items.length; // return 11</span><br><span class="line">items.splice(3,1) ;</span><br><span class="line">items.length; // return 10</span><br><span class="line">/* items will be equal to [12, 548, &quot;a&quot;, 5478, </span><br><span class="line">&quot;foo&quot;, 8852, undefined × 1, &quot;Doe&quot;, 2154,119]   */</span><br></pre></td></tr></table></figure>
+<p>应该用delete来删除一个对象的属性</p>
+<p>21、使用 length 来截短一个数组<br>跟上面的清空数组的方式类似，我们使用 length 属性来截短一个数组。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var myArray = [12 , 222 , 1000 , 124 , 98 , 10 ];</span><br><span class="line">myArray.length = 4; // myArray will be equal to [12 , 222 , 1000 , 124].</span><br></pre></td></tr></table></figure>
+<p>此外，如果你将一个数组的 length 设置成一个比现在大的值，那么这个数组的长度就会被改变，会增加新的 undefined 的项补上。 数组的 length 属性是可读写的。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">myArray.length = 10; // the new array length is 10</span><br><span class="line">myArray[myArray.length - 1] ; // undefined</span><br></pre></td></tr></table></figure>
+<p>22、在条件中使用逻辑运算符:AND、OR</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var foo = 10;</span><br><span class="line">foo == 10 &amp;&amp; doSomething(); // 等价于 if (foo == 10) doSomething();</span><br><span class="line">foo == 5 || doSomething(); // 等价于 if (foo != 5) doSomething();</span><br></pre></td></tr></table></figure>
+<p>OR可以用于给函数设置默认参数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">function doSomething(arg1)&#123;</span><br><span class="line">    Arg1 = arg1 || 10; // 如果arg1没有被设置的话，Arg1将被默认设成10</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>23、使用 map() 方法来遍历一个数组里的项</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var squares = [1,2,3,4].map(function (val) &#123;</span><br><span class="line">    return val * val;</span><br><span class="line">&#125;);</span><br><span class="line">// squares will be equal to [1, 4, 9, 16]</span><br></pre></td></tr></table></figure>
+<p>24、保留小数位</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var num =2.443242342;</span><br><span class="line">num = num.toFixed(4);  // num will be equal to 2.4432</span><br></pre></td></tr></table></figure>
+<p>25、浮点数问题</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">0.1 + 0.2 === 0.3 // is false</span><br><span class="line">9007199254740992 + 1 // is equal to 9007199254740992</span><br><span class="line">9007199254740992 + 2 // is equal to 9007199254740994</span><br></pre></td></tr></table></figure>
+<p>为什么是false？0.1+0.2等于0.30000000000000004。别忘了，所有的JavaScript数字在内部都是以64位二进制表示的浮点数，符合IEEE 754标准。更多的介绍，可以阅读this blog post.你可以使用 toFixed() 和 toPrecision() 方法解决这个问题。</p>
+<p>26、使用for-in遍历一个对象内部属性的时候注意检查</p>
+<p>下面的代码片段能够避免在遍历一个对象属性的时候访问原型的属性</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">for (var name in object) &#123;</span><br><span class="line">    if (object.hasOwnProperty(name)) &#123;</span><br><span class="line">        // do something with name</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>27、逗号运算符</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var a = 0;</span><br><span class="line">var b = ( a++, 99 );</span><br><span class="line">console.log(a);  // a will be equal to 1</span><br><span class="line">console.log(b);  // b is equal to 99</span><br></pre></td></tr></table></figure>
+<p>28、缓存需要查询或计算的变量</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var navright = document.querySelector(&apos;#right&apos;);</span><br><span class="line">var navleft = document.querySelector(&apos;#left&apos;);</span><br><span class="line">var navup = document.querySelector(&apos;#up&apos;);</span><br><span class="line">var navdown = document.querySelector(&apos;#down&apos;);</span><br></pre></td></tr></table></figure>
+<p>29、将参数传给isFinite()之前要验证</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">isFinite(0/0) ; // false</span><br><span class="line">isFinite(&quot;foo&quot;); // false</span><br><span class="line">isFinite(&quot;10&quot;); // true</span><br><span class="line">isFinite(10);   // true</span><br><span class="line">isFinite(undifined);  // false</span><br><span class="line">isFinite();   // false</span><br><span class="line">isFinite(null);  // true  !!!</span><br></pre></td></tr></table></figure>
+<p>30、避免数组中的负索引</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var numbersArray = [1,2,3,4,5];</span><br><span class="line">var from = numbersArray.indexOf(&quot;foo&quot;) ;  // from is equal to -1</span><br><span class="line">numbersArray.splice(from,2);    // will return [5]</span><br></pre></td></tr></table></figure>
+<p>确保传递给splice()的参数不是负数。</p>
+<p>31、对JSON进行序列化和反序列化</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var person = &#123;name :&apos;Saad&apos;, age : 26, department : &#123;ID : 15, name : &quot;R&amp;D&quot;&#125; &#125;;</span><br><span class="line">var stringFromPerson = JSON.stringify(person);</span><br><span class="line">/* stringFromPerson is equal to &quot;&#123;&quot;name&quot;:&quot;Saad&quot;,&quot;age&quot;:26,&quot;department&quot;:&#123;&quot;ID&quot;:15,&quot;name&quot;:&quot;R&amp;D&quot;&#125;&#125;&quot;   */</span><br><span class="line">var personFromString = JSON.parse(stringFromPerson);</span><br><span class="line">/* personFromString is equal to person object  */</span><br></pre></td></tr></table></figure>
+<p>32、避免使用eval()和Function()构造函数</p>
+<p>使用 eval 和 Function 构造函数是非常昂贵的操作，因为每次他们都会调用脚本引擎将源代码转换成可执行代码。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var func1 = new Function(functionCode);</span><br><span class="line">var func2 = eval(functionCode);</span><br></pre></td></tr></table></figure>
+<p>3、避免使用with</p>
+<p>使用 with() 会插入一个全局变量。因此，同名的变量会被覆盖值而引起混淆。</p>
+<p>34、避免用for-in循环一个数组</p>
+<p>不要这么使用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var sum = 0;</span><br><span class="line">for (var i in arrayNumbers) &#123;</span><br><span class="line">    sum += arrayNumbers[i];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>有更好的方式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var sum = 0;</span><br><span class="line">for (var i = 0, len = arrayNumbers.length; i &lt; len; i++) &#123;</span><br><span class="line">    sum += arrayNumbers[i];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>35、传函数给setTimeout()和setInterval()而不是字符串</p>
+<p>如果你将字符串传递给 setTimeout() 或者 setInterval()，这个字符串将被如使用 eval 一样被解析，这个是非常耗时的。不要使用：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">setInterval(&apos;doSomethingPeriodically()&apos;, 1000);</span><br><span class="line">setTimeOut(&apos;doSomethingAfterFiveSeconds()&apos;, 5000)</span><br></pre></td></tr></table></figure>
+<p>建议使用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">setInterval(doSomethingPeriodically, 1000);</span><br><span class="line">setTimeOut(doSomethingAfterFiveSeconds, 5000);</span><br></pre></td></tr></table></figure>
+<p>36、使用 switch/case 语句，而不是一系列的 if/else</p>
+<p>在2中情况以上的时候，使用 switch/case 更高效，而且更优雅（更易于组织代码）。但在判断的情况超过10种的时候不要使用 switch/case。</p>
+<p>37、判断数值范围时使用 switch/case</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">function getCategory(age) &#123;</span><br><span class="line">    var category = &quot;&quot;;</span><br><span class="line">    switch (true) &#123;</span><br><span class="line">        case isNaN(age):</span><br><span class="line">            category = &quot;not an age&quot;;</span><br><span class="line">            break;</span><br><span class="line">        case (age &gt;= 50):</span><br><span class="line">            category = &quot;Old&quot;;</span><br><span class="line">            break;</span><br><span class="line">        case (age &lt;= 20):</span><br><span class="line">            category = &quot;Baby&quot;;</span><br><span class="line">            break;</span><br><span class="line">        default:</span><br><span class="line">            category = &quot;Young&quot;;</span><br><span class="line">            break;</span><br><span class="line">    &#125;;</span><br><span class="line">    return category;</span><br><span class="line">&#125;</span><br><span class="line">getCategory(5);  // will return &quot;Baby&quot;</span><br></pre></td></tr></table></figure>
+<p>38、为创建的对象指定prototype</p>
+<p>写一个函数来创建一个以指定参数作为prototype的对象是有可能：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function clone(object) &#123;</span><br><span class="line">    function OneShotConstructor()&#123;&#125;;</span><br><span class="line">    OneShotConstructor.prototype= object;</span><br><span class="line">    return new OneShotConstructor();</span><br><span class="line">&#125;</span><br><span class="line">clone(Array).prototype ;  // []</span><br></pre></td></tr></table></figure>
+<p>39、HTML转义函数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function escapeHTML(text) &#123;</span><br><span class="line">    var replacements= &#123;&quot;&lt;&quot;: &quot;&lt;&quot;, &quot;&gt;&quot;: &quot;&gt;&quot;,&quot;&amp;&quot;: &quot;&amp;&quot;, &quot;\&quot;&quot;: &quot;&quot;&quot;&#125;;</span><br><span class="line">    return text.replace(/[&lt;&gt;&amp;&quot;]/g, function(character) &#123;</span><br><span class="line">        return replacements[character];</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>40、避免在循环内部使用try-catch-finally</p>
+<p>在运行时，每次当 catch 从句被执行的时候，被捕获的异常对象会赋值给一个变量，而在 try-catch-finally 结构中，每次都会新建这个变量。不要这样用：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var object = [&apos;foo&apos;, &apos;bar&apos;], i;</span><br><span class="line">for (i = 0, len = object.length; i &lt;len; i++) &#123;</span><br><span class="line">    try &#123;</span><br><span class="line">        // do something that throws an exception</span><br><span class="line">    &#125;</span><br><span class="line">    catch (e) &#123;</span><br><span class="line">        // handle exception</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>而是这样子用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var object = [&apos;foo&apos;, &apos;bar&apos;], i;</span><br><span class="line">try &#123;</span><br><span class="line">    for (i = 0, len = object.length; i &lt;len; i++) &#123;</span><br><span class="line">        // do something that throws an exception</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">catch (e) &#123;</span><br><span class="line">    // handle exception</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>41、给XMLHttpRequests设置超时</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">var xhr = new XMLHttpRequest ();</span><br><span class="line">xhr.onreadystatechange = function () &#123;</span><br><span class="line">    if (this.readyState == 4) &#123;</span><br><span class="line">        clearTimeout(timeout);</span><br><span class="line">        // do something with response data</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">var timeout = setTimeout( function () &#123;</span><br><span class="line">    xhr.abort(); // call error callback</span><br><span class="line">&#125;, 60*1000 /* timeout after a minute */ );</span><br><span class="line">xhr.open(&apos;GET&apos;, url, true);</span><br><span class="line"></span><br><span class="line">xhr.send();</span><br></pre></td></tr></table></figure>
+<p>42、处理WebSocket超时</p>
+<p>通常当WebSocket连接建立的时候，如果30秒内没有活动，服务器将暂停连接，同样的道理，防火墙也会暂停连接。</p>
+<p>为了防止超时的问题，你可能需要间隔地向服务器端发送空消息。要这样做的话，你可以在你的代码里添加下面的两个函数：一个用来保持连接，另一个用来取消连接的保持。通过这个技巧，你可以控制超时的问题。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">var timerID = 0;</span><br><span class="line">function keepAlive() &#123;</span><br><span class="line">    var timeout = 15000;</span><br><span class="line">    if (webSocket.readyState == webSocket.OPEN) &#123;</span><br><span class="line">        webSocket.send(&apos;&apos;);</span><br><span class="line">    &#125;</span><br><span class="line">    timerId = setTimeout(keepAlive, timeout);</span><br><span class="line">&#125;</span><br><span class="line">function cancelKeepAlive() &#123;</span><br><span class="line">    if (timerId) &#123;</span><br><span class="line">        cancelTimeout(timerId);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>keepAlive()方法应该被添加在webSOcket连接的 onOpen() 方法的最后，而 cancelKeepAlive() 添加在 onClose() 方法的最后。</p>
+<p>43、记住：原始运算符始终比函数调用要搞笑。使用 VanillaJS。</p>
+<p>例如，不要使用这个</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var min = Math.min(a,b);</span><br><span class="line">A.push(v);</span><br></pre></td></tr></table></figure>
+<p>而是用这个代替</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var min = a &lt; b ? a b;</span><br><span class="line">A[A.length] = v;</span><br></pre></td></tr></table></figure>
+<p>44、当编码的时候，要保持代码整洁。上线之前对代码进行压缩。</p>
+
       
 
       
-    </p></div>
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
     <div class="article-info article-info-index">
       
       
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/zhiqiu.github.io/2018/11/10/45种Javascript注意事项/">看更多文章 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://githanlongf.github.io/zhiqiu.github.io/2018/11/10/45种Javascript注意事项/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/zhiqiu.github.io/2018/11/10/10道典型的JavaScript问题和代码演示/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          10道典型的JavaScript问题
+        
+      </div>
+    </a>
+  
+  
+    <a href="/zhiqiu.github.io/2018/11/08/ajax常见问题/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">ajax常见问题</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -285,397 +433,34 @@
 
 
 
+  
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="45种Javascript注意事项" data-title="45种Javascript注意事项" data-url="https://githanlongf.github.io/zhiqiu.github.io/zhiqiu.github.io/2018/11/10/45种Javascript注意事项/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
 
   
-    <article id="post-ajax常见问题" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/zhiqiu.github.io/2018/11/08/ajax常见问题/">ajax常见问题</a>
-    </h1>
   
 
-        
-        <a href="/zhiqiu.github.io/2018/11/08/ajax常见问题/" class="archive-article-date">
-  	<time datetime="2018-11-08T07:32:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>本文主要介绍了ajax基本概念、ajax请求有几个步骤、ajax几种请求方式已经它们各自的优缺点、什么情况下造成跨域、
-        
-      
-
-      
-    </p></div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/zhiqiu.github.io/2018/11/08/ajax常见问题/">看更多文章 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-关于HTTP请求方式：GET和POST的本质比较" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/zhiqiu.github.io/2018/11/07/关于HTTP请求方式：GET和POST的本质比较/">关于HTTP请求方式：GET和POST的本质比较</a>
-    </h1>
   
 
-        
-        <a href="/zhiqiu.github.io/2018/11/07/关于HTTP请求方式：GET和POST的本质比较/" class="archive-article-date">
-  	<time datetime="2018-11-07T08:32:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>总结POST和GET的本质区别
-        
-      
-
-      
-    </p></div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/zhiqiu.github.io/2018/11/07/关于HTTP请求方式：GET和POST的本质比较/">看更多文章 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-js中常见的数组算法总结" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/zhiqiu.github.io/2018/11/07/js中常见的数组算法总结/">js中常见的数组算法总结</a>
-    </h1>
   
 
-        
-        <a href="/zhiqiu.github.io/2018/11/07/js中常见的数组算法总结/" class="archive-article-date">
-  	<time datetime="2018-11-07T07:14:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>总结一些常见的数组算法
-        
-      
-
-      
-    </p></div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/zhiqiu.github.io/2018/11/07/js中常见的数组算法总结/">看更多文章 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-js中的各种宽高以及位置总结" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/zhiqiu.github.io/2018/11/07/js中的各种宽高以及位置总结/">js中的各种宽高以及位置总结</a>
-    </h1>
-  
-
-        
-        <a href="/zhiqiu.github.io/2018/11/07/js中的各种宽高以及位置总结/" class="archive-article-date">
-  	<time datetime="2018-11-07T02:13:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>在javascript中操作dom节点让其运动的时候，常常会涉及到各种宽高以及位置坐标等概念，如果不能很好地理解这些属性所代表的意义，就不能理解js的运动原理
-        
-      
-
-      
-    </p></div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/zhiqiu.github.io/2018/11/07/js中的各种宽高以及位置总结/">看更多文章 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/zhiqiu.github.io/2018/11/03/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-        <a href="/zhiqiu.github.io/2018/11/03/hello-world/" class="archive-article-date">
-  	<time datetime="2018-11-03T08:05:28.759Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first
-        
-      
-
-      
-    </p></div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/zhiqiu.github.io/2018/11/03/hello-world/">看更多文章 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-html-知识" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/zhiqiu.github.io/2018/11/03/html-知识/">html常见问题</a>
-    </h1>
-  
-
-        
-        <a href="/zhiqiu.github.io/2018/11/03/html-知识/" class="archive-article-date">
-  	<time datetime="2018-11-02T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h1><h2 id="Doctype作用？标准模式与兼容模式各有什么区别"><a href="#Doctype作用？标准模式与兼容模式各有什么区别" class="headerlink" title="Doctype作用？标准模式与兼容模式各有什么区别?"></a>Doctype作用？标准模式与兼容模式各有什么区别?</h2><p>（1）、&lt;!DOCTYPE&gt;声明位于HTML文档中的第一行，处于 <code>&lt;html&gt;</code> 标签之前。告知
-        
-      
-
-      
-    </p></div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">html</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/zhiqiu.github.io/2018/11/03/html-知识/">看更多文章 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
 
 
@@ -702,8 +487,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

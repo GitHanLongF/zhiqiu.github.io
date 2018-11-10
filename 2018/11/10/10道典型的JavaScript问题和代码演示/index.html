@@ -6,18 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://githanlongf.github.io/zhiqiu.github.io">
-  <title>越努力越幸福</title>
+  <title>10道典型的JavaScript问题 | 越努力越幸福</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="学习不刻苦,不如卖红薯">
-<meta property="og:type" content="website">
-<meta property="og:title" content="越努力越幸福">
-<meta property="og:url" content="https://githanlongf.github.io/zhiqiu.github.io/index.html">
+  <meta name="description" content="在本文中，我将向您展示10个 JavaScript 技能典型问题以及其相关解决方案">
+<meta property="og:type" content="article">
+<meta property="og:title" content="10道典型的JavaScript问题">
+<meta property="og:url" content="https://githanlongf.github.io/zhiqiu.github.io/2018/11/10/10道典型的JavaScript问题和代码演示/index.html">
 <meta property="og:site_name" content="越努力越幸福">
-<meta property="og:description" content="学习不刻苦,不如卖红薯">
+<meta property="og:description" content="在本文中，我将向您展示10个 JavaScript 技能典型问题以及其相关解决方案">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-11-10T09:03:37.679Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="越努力越幸福">
-<meta name="twitter:description" content="学习不刻苦,不如卖红薯">
+<meta name="twitter:title" content="10道典型的JavaScript问题">
+<meta name="twitter:description" content="在本文中，我将向您展示10个 JavaScript 技能典型问题以及其相关解决方案">
   
     <link rel="alternative" href="/atom.xml" title="越努力越幸福" type="application/atom+xml">
   
@@ -159,16 +160,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-10道典型的JavaScript问题和代码演示" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+            <article id="post-10道典型的JavaScript问题和代码演示" class="article article-type-post " itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/zhiqiu.github.io/2018/11/10/10道典型的JavaScript问题和代码演示/">10道典型的JavaScript问题</a>
+    <h1 class="article-title" itemprop="name">
+      10道典型的JavaScript问题
     </h1>
   
 
@@ -181,28 +180,167 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>在本文中，我将向您展示10个 JavaScript 技能典型问题以及其相关解决方案
-        
+        <p>在本文中，我将向您展示10个 JavaScript 技能典型问题以及其相关解决方案<a id="more"></a>，来面试前端工程师。它们很有意思！</p>
+<h1 id="问题1-作用域（Scope）"><a href="#问题1-作用域（Scope）" class="headerlink" title="问题1: 作用域（Scope）"></a>问题1: 作用域（Scope）</h1><p>考虑以下代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">(function() &#123;</span><br><span class="line">var a = b = 5;</span><br><span class="line">&#125;)();</span><br><span class="line">console.log(b);</span><br></pre></td></tr></table></figure>
+<p>控制台（console）会打印出什么？</p>
+<h2 id="答案"><a href="#答案" class="headerlink" title="答案"></a>答案</h2><p>上述代码会打印出5。</p>
+<p>这个问题的陷阱就是，在立即执行函数表达式（IIFE）中，有两个赋值，但是其中变量a使用关键词var来声明。这就意味着a是这个函数的局部变量。与此相反，b被分配给了全局作用域（译注：也就是全局变量）。</p>
+<p>这个问题另一个陷阱就是，在函数中没有使用”严格模式” (‘use strict’;)。如果 严格模式开启，那么代码就会报错 ” Uncaught ReferenceError: b is not defined” 。请记住，如果这是预期的行为，严格模式要求你显式地引用全局作用域。所以，你需要像下面这么写：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">(function() &#123;</span><br><span class="line">    &apos;use strict&apos;;</span><br><span class="line">    var a = window.b = 5;</span><br><span class="line">&#125;)();</span><br><span class="line">console.log(b);</span><br></pre></td></tr></table></figure>
+<h1 id="问题2-创建-“原生-native-”-方法"><a href="#问题2-创建-“原生-native-”-方法" class="headerlink" title="问题2: 创建 “原生(native)” 方法"></a>问题2: 创建 “原生(native)” 方法</h1><p>在 String 对象上定义一个 repeatify 函数。这个函数接受一个整数参数，来明确字符串需要重复几次。这个函数要求字符串重复指定的次数。举个例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">console.log(&apos;hello&apos;.repeatify(3));</span><br></pre></td></tr></table></figure>
+<p>应该打印出hellohellohello.</p>
+<h2 id="答案-1"><a href="#答案-1" class="headerlink" title="答案"></a>答案</h2><p>一个可行的做法如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">String.prototype.repeatify = String.prototype.repeatify || function(times) &#123;</span><br><span class="line">var str = &apos;&apos;;</span><br><span class="line">for (var i = 0; i &lt; times; i++) &#123;</span><br><span class="line">str += this;</span><br><span class="line">&#125;</span><br><span class="line">return str;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>这个问题测试了开发人员对 javascript 中继承及原型(prototype)属性的知识。这也验证了开发人员是否有能力扩展原生数据类型功能（虽然不应该这么做）。</p>
+<p>在这里，另一个关键点是，看你怎样避免重写可能已经定义了的方法。这可以通过在定义自己的方法之前，检测方法是否已经存在。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String.prototype.repeatify = String.prototype.repeatify ||  function(times) &#123;/* code here */&#125;;</span><br></pre></td></tr></table></figure>
+<p>当你被问起去扩展一个Javascript方法时，这个技术非常有用。</p>
+<p>愚人码头译注：重复输出一个给定的字符串的解决方案可以看看这篇文章。也许面试官考你的是知识的广度和对新知识的掌握情况。</p>
+<h1 id="问题3-变量提升（Hoisting）"><a href="#问题3-变量提升（Hoisting）" class="headerlink" title="问题3: 变量提升（Hoisting）"></a>问题3: 变量提升（Hoisting）</h1><p>执行以下代码的结果是什么？为什么？</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">function test() &#123;</span><br><span class="line">    console.log(a);</span><br><span class="line">    console.log(foo());</span><br><span class="line">    var a = 1;</span><br><span class="line">    function foo() &#123;</span><br><span class="line">    return 2;</span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br><span class="line">test();</span><br></pre></td></tr></table></figure>
+<h2 id="答案-2"><a href="#答案-2" class="headerlink" title="答案"></a>答案</h2><p>这段代码的执行结果是undefined 和 2。</p>
+<p>这个结果的原因是，变量和函数都被提升(hoisted) 到了函数体的顶部。因此，当打印变量a时，它虽存在于函数体（因为a已经被声明），但仍然是undefined。换言之，上面的代码等同于下面的代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">function test() &#123;</span><br><span class="line">    var a;</span><br><span class="line">    function foo() &#123;</span><br><span class="line">    return 2;</span><br><span class="line">&#125;</span><br><span class="line">console.log(a);</span><br><span class="line">console.log(foo());</span><br><span class="line">a = 1;</span><br><span class="line">&#125;</span><br><span class="line">test();</span><br></pre></td></tr></table></figure>
+<h1 id="问题4-在javascript中，this是如何工作的"><a href="#问题4-在javascript中，this是如何工作的" class="headerlink" title="问题4: 在javascript中，this是如何工作的"></a>问题4: 在javascript中，<code>this</code>是如何工作的</h1><p>以下代码的结果是什么？请解释你的答案。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">var fullname = &apos;John Doe&apos;;</span><br><span class="line">var obj = &#123;</span><br><span class="line">    fullname: &apos;Colin Ihrig&apos;,</span><br><span class="line">    prop: &#123;</span><br><span class="line">    fullname: &apos;Aurelio De Rosa&apos;,</span><br><span class="line">    getFullname: function() &#123;</span><br><span class="line">    return this.fullname;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;;</span><br><span class="line">console.log(obj.prop.getFullname());</span><br><span class="line">var test = obj.prop.getFullname;</span><br><span class="line">console.log(test());</span><br></pre></td></tr></table></figure>
+<h2 id="答案-3"><a href="#答案-3" class="headerlink" title="答案"></a>答案</h2><p>这段代码打印结果是：Aurelio De Rosa 和 John Doe 。原因是，JavaScript中关键字this所引用的是函数上下文，取决于函数是如何调用的，而不是怎么被定义的。</p>
+<p>在第一个console.log()，getFullname()是作为obj.prop对象的函数被调用。因此，当前的上下文指代后者，并且函数返回这个对象的fullname属性。相反，当getFullname()被赋值给test变量时，当前的上下文是全局对象window，这是因为test被隐式地作为全局对象的属性。基于这一点，函数返回window的fullname，在本例中即为第一行代码设置的。</p>
+<h1 id="问题5-call-和-apply"><a href="#问题5-call-和-apply" class="headerlink" title="问题5: call() 和 apply()"></a>问题5: call() 和 apply()</h1><p>修复前一个问题，让最后一个console.log() 打印输出Aurelio De Rosa.</p>
+<h2 id="答案-4"><a href="#答案-4" class="headerlink" title="答案"></a>答案</h2><p>这个问题可以通过运用call()或者apply()方法强制转换上下文环境。如果你不了解这两个方法及它们的区别，我建议你看看这篇文章 function.call和function.apply之间有和区别?。 下面的代码中，我用了call(),但apply()也能产生同样的结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">console.log(test.call(obj.prop));</span><br></pre></td></tr></table></figure>
+<h1 id="问题6-闭包（Closures）"><a href="#问题6-闭包（Closures）" class="headerlink" title="问题6: 闭包（Closures）"></a>问题6: 闭包（Closures）</h1><p>考虑下面的代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var nodes = document.getElementsByTagName(&apos;button&apos;);</span><br><span class="line">for (var i = 0; i &lt; nodes.length; i++) &#123;</span><br><span class="line">nodes[i].addEventListener(&apos;click&apos;, function() &#123;</span><br><span class="line">console.log(&apos;You clicked element #&apos; + i);</span><br><span class="line">&#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>请问，如果用户点击第一个和第四个按钮的时候，控制台分别打印的结果是什么？为什么？</p>
+<h1 id="答案-5"><a href="#答案-5" class="headerlink" title="答案"></a>答案</h1><p>上面的代码考察了一个非常重要的 JavaScript 概念：闭包（Closures）。对于每一个JavaScript开发者来说，如果你想在网页中编写5行以上的代码，那么准确理解和恰当使用闭包是非常重要的。如果你想开始学习或者只是想简单地温习一下闭包，那么我强烈建议你去阅读 Colin Ihrig 这个教程：JavaScript Closures Demystified</p>
+<p>也就是说，代码打印两次You clicked element #NODES_LENGTH，其中NODES_LENGTH是nodes的结点个数。原因是在for循环完成后，变量i的值等于节点列表的长度。此外，因为i在代码添加处理程序的作用域中，该变量属于处理程序的闭包。你会记得，闭包中的变量的值不是静态的，因此i的值不是添加处理程序时的值（对于列表来说，第一个按钮为0，对于第二个按钮为1，依此类推）。在处理程序将被执行的时候，在控制台上将打印变量i的当前值，等于节点列表的长度。</p>
+<h1 id="问题7-闭包（Closures）"><a href="#问题7-闭包（Closures）" class="headerlink" title="问题7: 闭包（Closures）"></a>问题7: 闭包（Closures）</h1><p>修复上题的问题，使得点击第一个按钮时输出0，点击第二个按钮时输出1，依此类推。</p>
+<h2 id="答案-6"><a href="#答案-6" class="headerlink" title="答案"></a>答案</h2><p>有多种办法可以解决这个问题，下面主要使用两种方法解决这个问题。</p>
+<p>第一个解决方案使用立即执行函数表达式（IIFE）再创建一个闭包，从而得到所期望的i的值。实现此方法的代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var nodes = document.getElementsByTagName(&apos;button&apos;);</span><br><span class="line">for (var i = 0; i &lt; nodes.length; i++) &#123;</span><br><span class="line">nodes[i].addEventListener(&apos;click&apos;, (function(i) &#123;</span><br><span class="line">return function() &#123;</span><br><span class="line">console.log(&apos;You clicked element #&apos; + i);</span><br><span class="line">&#125;</span><br><span class="line">&#125;)(i));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>另一个解决方案不使用IIFE，而是将函数移到循环的外面。这种方法由下面的代码实现：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">function handlerWrapper(i) &#123;</span><br><span class="line">return function() &#123;</span><br><span class="line">console.log(&apos;You clicked element #&apos; + i);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">var nodes = document.getElementsByTagName(&apos;button&apos;);</span><br><span class="line">for (var i = 0; i &lt; nodes.length; i++) &#123;</span><br><span class="line">nodes[i].addEventListener(&apos;click&apos;, handlerWrapper(i));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="问题8：数据类型"><a href="#问题8：数据类型" class="headerlink" title="问题8：数据类型"></a>问题8：数据类型</h1><p>考虑如下代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">console.log(typeof null);</span><br><span class="line">console.log(typeof &#123;&#125;);</span><br><span class="line">console.log(typeof []);</span><br><span class="line">console.log(typeof undefined);</span><br></pre></td></tr></table></figure>
+<h1 id="答案-7"><a href="#答案-7" class="headerlink" title="答案"></a>答案</h1><p>前面的问题似乎有点傻，但它考察 typeof 操作符的知识。很多JavaScript开发人员不知道typeof的一些特性。在此示例中，控制台将显示以下内容：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">object</span><br><span class="line">object</span><br><span class="line">object</span><br><span class="line">undefined</span><br></pre></td></tr></table></figure>
+<p>最令人惊讶的输出结果可能是第三个。大多数开发人员认为typeof []会返回Array。如果你想测试一个变量是否为数组，您可以执行以下测试：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var myArray = [];</span><br><span class="line">if (myArray instanceof Array) &#123;</span><br><span class="line">// do something...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="问题9：事件循环"><a href="#问题9：事件循环" class="headerlink" title="问题9：事件循环"></a>问题9：事件循环</h1><p>下面代码运行结果是什么？请解释。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">function printing() &#123;</span><br><span class="line">    console.log(1);</span><br><span class="line">    setTimeout(function() &#123; console.log(2); &#125;, 1000);</span><br><span class="line">    setTimeout(function() &#123; console.log(3); &#125;, 0);</span><br><span class="line">    console.log(4);</span><br><span class="line">&#125;</span><br><span class="line">printing();</span><br></pre></td></tr></table></figure>
+<h2 id="答案-8"><a href="#答案-8" class="headerlink" title="答案"></a>答案</h2><p>输出结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1</span><br><span class="line">4</span><br><span class="line">3</span><br><span class="line">2</span><br></pre></td></tr></table></figure>
+<p>想知道为什么输出顺序是这样的，你需要弄了解setTimeout()做了什么，以及浏览器的事件循环原理。浏览器有一个事件循环用于检查事件队列，处理延迟的事件。UI事件（例如，点击，滚动等），Ajax回调，以及提供给setTimeout()和setInterval()的回调都会依次被事件循环处理。因此，当调用setTimeout()函数时，即使延迟的时间被设置为0，提供的回调也会被排队。回调会呆在队列中，直到指定的时间用完后，引擎开始执行动作（如果它在当前不执行其他的动作）。因此，即使setTimeout()回调被延迟0毫秒，它仍然会被排队，并且直到函数中其他非延迟的语句被执行完了之后，才会执行。</p>
+<p>有了这些认识，理解输出结果为“1”就容易了，因为它是函数的第一句并且没有使用setTimeout()函数来延迟。接着输出“4”，因为它是没有被延迟的数字，也没有进行排队。然后，剩下了“2”，“3”，两者都被排队，但是前者需要等待一秒，后者等待0秒（这意味着引擎完成前两个输出之后马上进行）。这就解释了为什么“3”在“2”之前。</p>
+<h1 id="问题10：算法"><a href="#问题10：算法" class="headerlink" title="问题10：算法"></a>问题10：算法</h1><p>写一个isPrime()函数，当其为质数时返回true，否则返回false。</p>
+<h2 id="答案-9"><a href="#答案-9" class="headerlink" title="答案"></a>答案</h2><p>我认为这是面试中最常见的问题之一。然而，尽管这个问题经常出现并且也很简单，但是从被面试人提供的答案中能很好地看出被面试人的数学和算法水平。</p>
+<p>首先， 因为JavaScript不同于C或者Java，因此你不能信任传递来的数据类型。如果面试官没有明确地告诉你，你应该询问他是否需要做输入检查，还是不进行检查直接写函数。严格上说，应该对函数的输入进行检查。</p>
+<p>第二点要记住：负数不是质数。同样的，1和0也不是，因此，首先测试这些数字。此外，2是质数中唯一的偶数。没有必要用一个循环来验证4,6,8。再则，如果一个数字不能被2整除，那么它不能被4，6，8等整除。因此，你的循环必须跳过这些数字。如果你测试输入偶数，你的算法将慢2倍（你测试双倍数字）。可以采取其他一些更明智的优化手段，我这里采用的是适用于大多数情况的。例如，如果一个数字不能被5整除，它也不会被5的倍数整除。所以，没有必要检测10,15,20等等。如果你深入了解这个问题的解决方案，我建议你去看相关的Wikipedia介绍。</p>
+<p>最后一点，你不需要检查比输入数字的开方还要大的数字。我感觉人们会遗漏掉这一点，并且也不会因为此而获得消极的反馈。但是，展示出这一方面的知识会给你额外加分。</p>
+<p>现在你具备了这个问题的背景知识，下面是总结以上所有考虑的解决方案：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">function isPrime(number) &#123;</span><br><span class="line">// If your browser doesn&apos;t support the method Number.isInteger of ECMAScript 6,</span><br><span class="line">// you can implement your own pretty easily</span><br><span class="line">if (typeof number !== &apos;number&apos; || !Number.isInteger(number)) &#123;</span><br><span class="line">// Alternatively you can throw an error.</span><br><span class="line">return false;</span><br><span class="line">&#125;</span><br><span class="line">if (number &lt; 2) &#123;</span><br><span class="line">return false;</span><br><span class="line">&#125;</span><br><span class="line">if (number === 2) &#123;</span><br><span class="line">return true;</span><br><span class="line">&#125; else if (number % 2 === 0) &#123;</span><br><span class="line">return false;</span><br><span class="line">&#125;</span><br><span class="line">var squareRoot = Math.sqrt(number);</span><br><span class="line">for(var i = 3; i &lt;= squareRoot; i += 2) &#123;</span><br><span class="line">if (number % i === 0) &#123;</span><br><span class="line">return false;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">return true;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
       
 
       
-    </p></div>
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
     <div class="article-info article-info-index">
       
       
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/zhiqiu.github.io/2018/11/10/10道典型的JavaScript问题和代码演示/">看更多文章 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://githanlongf.github.io/zhiqiu.github.io/2018/11/10/10道典型的JavaScript问题和代码演示/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/zhiqiu.github.io/2018/11/10/45种Javascript注意事项/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">45种Javascript注意事项</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -222,460 +360,34 @@
 
 
 
+  
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="10道典型的JavaScript问题和代码演示" data-title="10道典型的JavaScript问题" data-url="https://githanlongf.github.io/zhiqiu.github.io/zhiqiu.github.io/2018/11/10/10道典型的JavaScript问题和代码演示/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
 
   
-    <article id="post-45种Javascript注意事项" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/zhiqiu.github.io/2018/11/10/45种Javascript注意事项/">45种Javascript注意事项</a>
-    </h1>
   
 
-        
-        <a href="/zhiqiu.github.io/2018/11/10/45种Javascript注意事项/" class="archive-article-date">
-  	<time datetime="2018-11-10T07:52:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>在这篇文章中，我将分享一些JavaScript常用的技巧，窍门和最佳实践。
-        
-      
-
-      
-    </p></div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/zhiqiu.github.io/2018/11/10/45种Javascript注意事项/">看更多文章 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-ajax常见问题" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/zhiqiu.github.io/2018/11/08/ajax常见问题/">ajax常见问题</a>
-    </h1>
   
 
-        
-        <a href="/zhiqiu.github.io/2018/11/08/ajax常见问题/" class="archive-article-date">
-  	<time datetime="2018-11-08T07:32:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>本文主要介绍了ajax基本概念、ajax请求有几个步骤、ajax几种请求方式已经它们各自的优缺点、什么情况下造成跨域、
-        
-      
-
-      
-    </p></div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/zhiqiu.github.io/2018/11/08/ajax常见问题/">看更多文章 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-关于HTTP请求方式：GET和POST的本质比较" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/zhiqiu.github.io/2018/11/07/关于HTTP请求方式：GET和POST的本质比较/">关于HTTP请求方式：GET和POST的本质比较</a>
-    </h1>
   
 
-        
-        <a href="/zhiqiu.github.io/2018/11/07/关于HTTP请求方式：GET和POST的本质比较/" class="archive-article-date">
-  	<time datetime="2018-11-07T08:32:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>总结POST和GET的本质区别
-        
-      
-
-      
-    </p></div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/zhiqiu.github.io/2018/11/07/关于HTTP请求方式：GET和POST的本质比较/">看更多文章 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-js中常见的数组算法总结" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/zhiqiu.github.io/2018/11/07/js中常见的数组算法总结/">js中常见的数组算法总结</a>
-    </h1>
-  
-
-        
-        <a href="/zhiqiu.github.io/2018/11/07/js中常见的数组算法总结/" class="archive-article-date">
-  	<time datetime="2018-11-07T07:14:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>总结一些常见的数组算法
-        
-      
-
-      
-    </p></div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/zhiqiu.github.io/2018/11/07/js中常见的数组算法总结/">看更多文章 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-js中的各种宽高以及位置总结" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/zhiqiu.github.io/2018/11/07/js中的各种宽高以及位置总结/">js中的各种宽高以及位置总结</a>
-    </h1>
-  
-
-        
-        <a href="/zhiqiu.github.io/2018/11/07/js中的各种宽高以及位置总结/" class="archive-article-date">
-  	<time datetime="2018-11-07T02:13:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>在javascript中操作dom节点让其运动的时候，常常会涉及到各种宽高以及位置坐标等概念，如果不能很好地理解这些属性所代表的意义，就不能理解js的运动原理
-        
-      
-
-      
-    </p></div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/zhiqiu.github.io/2018/11/07/js中的各种宽高以及位置总结/">看更多文章 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/zhiqiu.github.io/2018/11/03/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-        <a href="/zhiqiu.github.io/2018/11/03/hello-world/" class="archive-article-date">
-  	<time datetime="2018-11-03T08:05:28.759Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first
-        
-      
-
-      
-    </p></div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/zhiqiu.github.io/2018/11/03/hello-world/">看更多文章 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-html-知识" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/zhiqiu.github.io/2018/11/03/html-知识/">html常见问题</a>
-    </h1>
-  
-
-        
-        <a href="/zhiqiu.github.io/2018/11/03/html-知识/" class="archive-article-date">
-  	<time datetime="2018-11-02T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h1><h2 id="Doctype作用？标准模式与兼容模式各有什么区别"><a href="#Doctype作用？标准模式与兼容模式各有什么区别" class="headerlink" title="Doctype作用？标准模式与兼容模式各有什么区别?"></a>Doctype作用？标准模式与兼容模式各有什么区别?</h2><p>（1）、&lt;!DOCTYPE&gt;声明位于HTML文档中的第一行，处于 <code>&lt;html&gt;</code> 标签之前。告知
-        
-      
-
-      
-    </p></div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">html</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/zhiqiu.github.io/2018/11/03/html-知识/">看更多文章 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
 
 
@@ -702,8 +414,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
