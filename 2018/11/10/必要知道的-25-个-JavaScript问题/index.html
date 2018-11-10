@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="https://githanlongf.github.io/zhiqiu.github.io">
   <title>必要知道的 25 个 JavaScript问题 | 越努力越幸福</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1、使用 typeof bar === “object” 判断 bar 是不是一个对象有神马潜在的弊端？如何避免这种弊端？使用 typeof 的弊端是显而易见的(这种弊端同使用 instanceof)： 123456let obj = &amp;#123;&amp;#125;;let arr = [];console.log(typeof obj === &amp;apos;object&amp;apos;);  //truec">
+  <meta name="description" content="25 个 JavaScript问题">
 <meta property="og:type" content="article">
 <meta property="og:title" content="必要知道的 25 个 JavaScript问题">
 <meta property="og:url" content="https://githanlongf.github.io/zhiqiu.github.io/2018/11/10/必要知道的-25-个-JavaScript问题/index.html">
 <meta property="og:site_name" content="越努力越幸福">
-<meta property="og:description" content="1、使用 typeof bar === “object” 判断 bar 是不是一个对象有神马潜在的弊端？如何避免这种弊端？使用 typeof 的弊端是显而易见的(这种弊端同使用 instanceof)： 123456let obj = &amp;#123;&amp;#125;;let arr = [];console.log(typeof obj === &amp;apos;object&amp;apos;);  //truec">
+<meta property="og:description" content="25 个 JavaScript问题">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-10T10:10:24.582Z">
+<meta property="og:updated_time" content="2018-11-10T10:14:18.909Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="必要知道的 25 个 JavaScript问题">
-<meta name="twitter:description" content="1、使用 typeof bar === “object” 判断 bar 是不是一个对象有神马潜在的弊端？如何避免这种弊端？使用 typeof 的弊端是显而易见的(这种弊端同使用 instanceof)： 123456let obj = &amp;#123;&amp;#125;;let arr = [];console.log(typeof obj === &amp;apos;object&amp;apos;);  //truec">
+<meta name="twitter:description" content="25 个 JavaScript问题">
   
     <link rel="alternative" href="/atom.xml" title="越努力越幸福" type="application/atom+xml">
   
@@ -180,7 +180,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="1、使用-typeof-bar-“object”-判断-bar-是不是一个对象有神马潜在的弊端？如何避免这种弊端？"><a href="#1、使用-typeof-bar-“object”-判断-bar-是不是一个对象有神马潜在的弊端？如何避免这种弊端？" class="headerlink" title="1、使用 typeof bar === “object” 判断 bar 是不是一个对象有神马潜在的弊端？如何避免这种弊端？"></a>1、使用 typeof bar === “object” 判断 bar 是不是一个对象有神马潜在的弊端？如何避免这种弊端？</h3><p>使用 typeof 的弊端是显而易见的(这种弊端同使用 instanceof)：</p>
+        <p>25 个 JavaScript问题<a id="more"></a></p>
+<h3 id="1、使用-typeof-bar-“object”-判断-bar-是不是一个对象有神马潜在的弊端？如何避免这种弊端？"><a href="#1、使用-typeof-bar-“object”-判断-bar-是不是一个对象有神马潜在的弊端？如何避免这种弊端？" class="headerlink" title="1、使用 typeof bar === “object” 判断 bar 是不是一个对象有神马潜在的弊端？如何避免这种弊端？"></a>1、使用 typeof bar === “object” 判断 bar 是不是一个对象有神马潜在的弊端？如何避免这种弊端？</h3><p>使用 typeof 的弊端是显而易见的(这种弊端同使用 instanceof)：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">let obj = &#123;&#125;;</span><br><span class="line">let arr = [];</span><br><span class="line"></span><br><span class="line">console.log(typeof obj === &apos;object&apos;);  //true</span><br><span class="line">console.log(typeof arr === &apos;object&apos;);  //true</span><br><span class="line">console.log(typeof null === &apos;object&apos;);  //true</span><br></pre></td></tr></table></figure>
 <p>从上面的输出结果可知，<code>typeof bar === &quot;object&quot;</code> 并不能准确判断 bar 就是一个 Object。可以通过 <code>Object.prototype.toString.call(bar) === &quot;[object Object]&quot;</code> 来避免这种弊端：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">let obj = &#123;&#125;;</span><br><span class="line">let arr = [];</span><br><span class="line"></span><br><span class="line">console.log(Object.prototype.toString.call(obj));  //[object Object]</span><br><span class="line">console.log(Object.prototype.toString.call(arr));  //[object Array]</span><br><span class="line">console.log(Object.prototype.toString.call(null));  //[object Null]</span><br></pre></td></tr></table></figure>
