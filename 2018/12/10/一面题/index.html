@@ -6,18 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://githanlongf.github.io/zhiqiu.github.io">
-  <title>Archives | 越努力越幸福</title>
+  <title>一面题 | 越努力越幸福</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="学习不刻苦,不如卖红薯">
-<meta property="og:type" content="website">
-<meta property="og:title" content="越努力越幸福">
-<meta property="og:url" content="https://githanlongf.github.io/zhiqiu.github.io/archives/index.html">
+  <meta name="description" content="本文涉及到：页面布局、CSS盒模型、DOM事件、HTTP协议类、原型链、面向对象、通信类、安全类、算法类等">
+<meta property="og:type" content="article">
+<meta property="og:title" content="一面题">
+<meta property="og:url" content="https://githanlongf.github.io/zhiqiu.github.io/2018/12/10/一面题/index.html">
 <meta property="og:site_name" content="越努力越幸福">
-<meta property="og:description" content="学习不刻苦,不如卖红薯">
+<meta property="og:description" content="本文涉及到：页面布局、CSS盒模型、DOM事件、HTTP协议类、原型链、面向对象、通信类、安全类、算法类等">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-12-11T04:11:29.198Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="越努力越幸福">
-<meta name="twitter:description" content="学习不刻苦,不如卖红薯">
+<meta name="twitter:title" content="一面题">
+<meta name="twitter:description" content="本文涉及到：页面布局、CSS盒模型、DOM事件、HTTP协议类、原型链、面向对象、通信类、安全类、算法类等">
   
     <link rel="alternative" href="/atom.xml" title="越努力越幸福" type="application/atom+xml">
   
@@ -159,295 +160,512 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-一面题" class="article article-type-post " itemscope="" itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      一面题
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/zhiqiu.github.io/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/zhiqiu.github.io/2018/12/10/一面题/" class="archive-article-date">
+
+        
+        <a href="/zhiqiu.github.io/2018/12/10/一面题/" class="archive-article-date">
   	<time datetime="2018-12-10T06:18:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-10</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/zhiqiu.github.io/2018/12/10/一面题/">一面题</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>本文涉及到：页面布局、CSS盒模型、DOM事件、HTTP协议类、原型链、面向对象、通信类、安全类、算法类等<a id="more"></a></p>
+<h2 id="1-页面布局"><a href="#1-页面布局" class="headerlink" title="1.页面布局"></a>1.页面布局</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">不要说 “我忘了”，“我看过”，“没看过”</span><br><span class="line">“这个我真的不太了解”“向面试官请教我应该去哪了解这方面的知识”</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">    一.浮动</span><br><span class="line">        优点：兼容性比较好</span><br><span class="line">        缺点：脱离文档流</span><br><span class="line">        去掉高度：不能用</span><br><span class="line">        </span><br><span class="line">        图示：</span><br><span class="line">         ![图片](https://github.com/GitHanLongF/MyPostImage/blob/master/mian1.png?raw=true)</span><br><span class="line"></span><br><span class="line">    二.绝对定位</span><br><span class="line">        优点：快捷便捷</span><br><span class="line">        缺点：脱离文档流</span><br><span class="line">        去掉高度：不能用</span><br><span class="line"></span><br><span class="line">        图示：</span><br><span class="line">         ![图片](https://github.com/GitHanLongF/MyPostImage/blob/master/mian2.png?raw=true)</span><br><span class="line"></span><br><span class="line">    三.flex布局（css3样式）</span><br><span class="line">        优点：比较完美</span><br><span class="line">        缺点：</span><br><span class="line">        去掉高度：没问题</span><br><span class="line"></span><br><span class="line">        图示：</span><br><span class="line">         ![图片](https://github.com/GitHanLongF/MyPostImage/blob/master/mian3.png?raw=true)</span><br><span class="line"></span><br><span class="line">    四.表格布局</span><br><span class="line">        优点：兼容性比较好</span><br><span class="line">        缺点：</span><br><span class="line">        去掉高度：没问题</span><br><span class="line"></span><br><span class="line">        图示：</span><br><span class="line">         ![图片](https://github.com/GitHanLongF/MyPostImage/blob/master/mian4.png?raw=true)</span><br><span class="line"></span><br><span class="line">    五.网格布局</span><br><span class="line">        优点：代码量少</span><br><span class="line">        缺点：兼容性不是很好</span><br><span class="line">        去掉高度：不能用</span><br><span class="line"></span><br><span class="line">        图示：</span><br><span class="line">         ![图片](https://github.com/GitHanLongF/MyPostImage/blob/master/mian5.png?raw=true)</span><br><span class="line">```    </span><br><span class="line"></span><br><span class="line">## 2.CSS盒模型</span><br></pre></td></tr></table></figure>
+<pre><code>一.基本概念：标准模型+IE模型
 
-        <div class="article-info info-on-right">
-          
-          
+二.区别：
+    标准模型：width=content
+    IE模型：width=padding+border+content
 
+三.如何设置这两种模型：
+    标准：box-sizing=content-box;浏览器默认的模型
+    IE：box-sizing=border-box;
+
+四.JS如何设置获取盒模型对应的宽和高：
+    --dom.style.width/height （只取到内联样式）
+    --dom.currentStyle.width/height （渲染后的宽和高  但是只有IE支持）
+    --window.getComputedStyle(dom).width/height （兼容性比较好）
+    --dom.getBoundingClientRect().width/height （获取绝对位置）
+
+五.实例题（根据盒模型解释边距重叠）：
+    父子元素边距重叠：
+        没加overflow：hidden时--- 块级元素里内嵌一个块级元素 子元素的高度是100px 子元素距离父元素上边距10px；那么父元素为100px
+        如果加上--- 父元素高度为110px
+    兄弟元素边距重叠：
+        上下边距取最大值
+    空元素边距重叠：
+        margin-top或者margin-bottom去最大值
+
+六.BFC（边距重叠解决方案）
+    概念：块级格式化上下文
+    原理：
+    如何创建BFC
+        --float的值不是none
+        --position的值不是static或者relative。
+        --display的值是inline-block、table-cell、flex、table-caption或者inline-flex
+        --overflow的值不是visible
+    BFC应用场景    
+            --兄弟元素消除上下边距重叠问题： 在每个兄弟元素上面加一个父级元素 父级元素加一个BFC就可以了
+            --兄弟元素高度不相同的时候，高度高的元素会溢出，然后在元素高的里面创建一个BFC
+            --清除浮动，子元素有浮动，可以在父元素上面创建一个BFC
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">## 3.DOM事件</span><br></pre></td></tr></table></figure>
+<pre><code>一.基本概念：DOM事件的级别 (DOM1设置的不是事件相关的东西)
+
+    DOM0  element.onclick=function(){}
+
+    DOM2  element.addEventListener(&apos;click&apos;,function(){},false)
+
+    DOM3 element.addEventListener(&apos;keyup&apos;,function(){},false)
+
+二.DOM事件模型
+    捕获（从上往下，也就是目标元素父级）
+    冒泡（从下往上，也就是目标元素）
+
+三.DOM事件流
+    捕获（从上往下，也就是根节点document）—&gt; 目标元素—&gt; 冒泡（从下往上，也就是目标元素）
+
+四.描述DOM事件捕获的具体流程
+    window--&gt;document--&gt;html--&gt;body--&gt;...--&gt;目标元素
+    描述DOM事件冒泡的具体流程
+    目标元素--&gt;body--&gt;html--&gt;document--&gt;window
+
+五.Event对象的常见应用
+    --event.preventDefault() //阻止默认事件
+    --event.stopPropagation() //阻止冒泡
+    --event.stopImmediatePropagation // 事件的优先级
+    //事件代理（不想子元素一个一个被点击，只要在父元素上绑定就行）
+    --event.currentTarget 
+    --event.target
+
+    window.addEventListener(&apos;click&apos;,function () {
+            console.log(&apos;window&apos;);
+        },true)
+        document.addEventListener(&apos;click&apos;,function () {
+            console.log(&apos;document&apos;);
+        },true)
+        document.documentElement.addEventListener(&apos;click&apos;,function () {
+            console.log(&apos;html&apos;);
+        },true)
+        document.body.addEventListener(&apos;click&apos;,function () {
+            console.log(&apos;body&apos;);
+        },true)
+        ev.addEventListener(&apos;click&apos;,function () {
+            console.log(&apos;ev&apos;);
+        },true)
+
+    相应的顺序是：window document html body ev
+    第二个参数为true是 捕获阶段 false为冒泡阶段  默认为false
+
+六.自定义事件
+    var eve = new Event(&apos;test&apos;)
+    ev.addEventLister(&apos;test&apos;,function(){
+        console.log(&apos;test&apos;)
+    },true)
+    ev.dispatchEvent(eve ) //事件的触发 test
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">## 4.HTTP协议类</span><br></pre></td></tr></table></figure>
+<pre><code>一.HTTP协议的主要特点
+    1.简单快速
+    2.灵活
+    3.无连接
+    4.无状态
+
+二.HTTP报文的组成部分
+    请求报文：请求头--&gt;请求头--&gt;空行--&gt;请求体
+    相应报文：状态行--&gt;相应体--&gt;空行--&gt;相应体
+
+三.HTTP方法
+    GET---&gt;获取资源
+    POST--&gt;发送资源
+    PUT--&gt;更新资源
+    DELETE--&gt;删除资源
+    HEAD--&gt;获取报文首部
+
+四.POST和GET的区别
+    --GET在浏览器回退是无害的，而POST会再次提交请求
+    --GET请求会被浏览器主动缓存，而POST不会，除非主动设置
+    --GET请求的参数会被完整保留在浏览器历史记录里，而POST中的参数不会
+    --GET比POST更不安全，因为参数直接暴露在URL上，所以不能传递敏感信息
+
+五.HTTP状态码
+    1**：指示信息--表示请求
+    2**：成功--表示请求已被成功接收
+    3**：重定向--要完成请求必须要更进一步的操作
+    4**：客户端错误--请求有语法错误或请求无法实现
+    5**：服务器错误--服务器未能实现合法的请求
+
+六.什么是持久链接
+    HTTP协议采用“请求-应答”模式，当使用普通模式，即非Keep-Alive模式时，每个请求/应答
+    客户和服务器都要新建一个连接，完成之后立即断开连接
+
+    当使用Keep-Alive模式（又称持久链接）时，Keep-Alive功能使客户端到服务器端的链接
+    持续有效，当出现对服务器的后续请求时，Keep-Alive功能避免了建立或者重新建立链接
+
+七.什么是管线化（仅在HTTP1.1支持）
+    在持久连接的情况下，某个连接上的消息传递类似于
+    请求1-&gt;相应1-&gt;请求2-&gt;相应2-&gt;请求3-&gt;相应3
+
+    管线化时 某个连接上的消息变成类似于这样
+    请求1-&gt;请求2-&gt;请求3-&gt;相应1-&gt;相应2-&gt;相应3
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">## 5.原型链（重要）</span><br></pre></td></tr></table></figure>
+<pre><code>一.创建对象有几种方法
+    1.var 01={name:&apos;01&apos;} //字面量
+    var 02=new Object({name:&apos;011&apos;})
+    2.var M=function(name){this.name=name} //构造函数法
+    var 03=new M(&apos;03&apos;);
+    3.var P={name:&apos;04&apos;}  //Object.create
+    var 04=Object.create(P)    
+
+    03是实例
+    M是构造函数
+
+    构造函数.prototype是原型对象 
+    原型对象.constructor是构造函数
+    实例.__proto__是原型对象  //只有实例对象有__proto__属性 函数也有__proto__属性 因为
+
+二.原型对象、构造函数、实例对象、原型链
+    实例对象：var 01={name:&apos;01&apos;}  //01就是实例对象
+    构造函数：var M=function(name){this.name=name} //M是一个构造函数 new后面的函数就是构造函数  构造函数可以通过一个new来生成一个实例 任何函数都是构造函数
+    原型对象：var M=function(name){this.name=name} //M.prototype
+    构造函数: M.prototype.constructor
+    实例对象与原型对象的关系：03._proto_===M.prototype //true M的原型对象
+
+    图示：
+        ![图片](https://github.com/GitHanLongF/MyPostImage/blob/master/mian6.png?raw=true)
+
+三.instanceof的原理
+    判断实例对象的__proto__属性和构造函数的prototype属性是不是同一个引用
+
+四.new运算符
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">## 6.面向对象（重要）</span><br></pre></td></tr></table></figure>
+<pre><code>一.类与实例
+
+图示：
+![图片](https://github.com/GitHanLongF/MyPostImage/blob/master/mian7.png?raw=true)
+
+--- 类的声明
+    //1
+        function Animal() {
+            this.name = &apos;name&apos;;
+        }
+        //2 通过ES6中的class的声明
+        class Animal2{
+            constructor(){
+                this.name=&apos;name&apos;;
+            }
+        }
+---生成实例
+    通过new
+        console.log(new Animal(),new Animal2())
+
+二.类与继承
+    ---如何实现继承
+    ---继承的几种方式
+        //继承
+            //1.通过构造函数实现继承 （缺点就是子类不能继承父类的原型对象）
+            function Parent1() {
+                this.name=&apos;name&apos;;
+            }
+            Parent1.prototype.say=function () {} //定义一个Parent1的原型对象上的方法 Child1继承不了 父类的属性如果都在构造函数体内 就可以实现完全继承
+            function Child1() {
+                Parent1.call(this); //this指的是child1  此处还可以使用apply
+                this.type=&apos;child1&apos;
+            }
+            console.log(new Child1().name) //name
+            // console.log(new Child1().say()) //say is not a function 报错
+
+            //2.借助原型链实现继承（优点是弥补构造函数的缺点）
+            function Parent2() {
+                this.name=&apos;name2&apos;
+            }
+            function Child2() {
+                this.type=&apos;child2&apos;
+            }
+            Child2.prototype = new Parent2(); //每个实例对象都有一个prototype方法
+            console.log(new Child2().name) //name2
+
+            //3.组合方式
+            function Parent3() {
+                this.name=&apos;name2&apos;
+                this.play=[1,2,3]
+            }
+            function Child3() {
+                Parent3.call(this);
+                this.type=&apos;child2&apos;
+            }
+            Child3.prototype= new Parent3(); //原型链继承
+            var s3= new Child3();
+            var s4= new Child3();
+            s3.play.push(4);
+            console.log(s3.play,s4.play) //[1,2,3,4] [1,2,3]
+
+            //4.组合方式的优化1
+            function Parent4() {
+                this.name=&apos;name2&apos;
+                this.play=[1,2,3]
+            }
+            function Child4() {
+                Parent4.call(this);
+                this.type=&apos;child2&apos;
+            }
+            Child4.prototype= Parent4.prototype; //原型链继承
+                var s5= new Child4();
+                var s6= new Child4();
+                console.log(s5.play,s6.play) //[1,2,3] [1,2,3]
+            console.log(s5 instanceof Child4) //true
+                console.log(s5.constructor) //输出Parent4父级的构造函数
+
+                //5.组合方式的优化2(最终优化方案)
+            function Parent5() {
+                this.name=&apos;name2&apos;
+                this.play=[1,2,3]
+            }
+            function Child5() {
+                Parent5.call(this);
+                this.type=&apos;child2&apos;
+            }
+            Child5.prototype= Object.create(Parent5.prototype); //原型链继承
+            Child5.prototype.constructor=Child5
+            var s7= new Child5();
+            var s8= new Child5();
+        console.log(s7.play,s8.play) //[1,2,3] [1,2,3]
+            console.log(s7 instanceof Child4) //true
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">## 7.通信类</span><br></pre></td></tr></table></figure>
+<pre><code>1.什么是同源策略及限制
+    ---同源策略限制从一个源加载的文档或脚本如何与来自另一个源的资源进行交互。这是一个用于隔离潜在恶意文件的关键的安全机制
+        Cookie、LocalStorage和indexDB无法获取
+        DOM无法获取
+        AJAX请求不能发送
+
+2.前后端如何通信
+    ---Ajax    、WebSocket 、CORS
+
+3.如何创建Ajax
+    ---Ajax概念
+        异步的javascript和xml  
+
+        AJAX 是一种用于创建快速动态网页的技术。  
+
+        Ajax用来与后台交互
+
+    ---XMLHttpRequest对象的工作流程
+        //创建 XMLHttpRequest 对象
+        var ajax = new XMLHttpRequest();
+        //规定请求的类型、URL 以及是否异步处理请求。
+        ajax.open(&apos;GET&apos;,url,true);
+        //发送信息至服务器时内容编码类型
+        ajax.setRequestHeader(&quot;Content-type&quot;, &quot;application/x-www-form-urlencoded&quot;); 
+        //发送请求
+        ajax.send(null);  
+        //接受服务器响应数据
+        ajax.onreadystatechange = function () {
+        if (obj.readyState == 4 &amp;&amp; (obj.status == 200 || obj.status == 304)) { 
+        }
+        };
+    ---兼容性处理
+    ---事件的触发条件
+    ---事件的触发顺序
+
+4.跨域通信的几种方式（最重要）
+    ---JSONP
+        动态创建一个script标签。利用script标签的src属性不受同源策略限制。因为所有的src属性和href属性都不受
+        同源策略限制。可以请求第三方服务器数据内容。
+    ---Hash（hash改变 页面不改变）
+    ---postMessage（H5新增加）
+    ---WebSocket
+    ---CORS（跨域资源共享）
+        服务器设置Access-Control-Allow-OriginHTTP响应头之后，浏览器将会允许跨域请求
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">## 8.安全类</span><br></pre></td></tr></table></figure>
+<pre><code>图示：
+
+
+1.CSRF
+    ---基本概念和缩写    
+            通常称为跨站请求伪造，英文名Cross-site request forgery 缩写CSRF
+    ---攻击原理
+       ![图片](https://github.com/GitHanLongF/MyPostImage/blob/master/mian8.png?raw=true)
+    ---防御措施
+        Token验证
+        Referer验证
+        隐藏令牌
+2.XSS
+    ---基本概念和缩写
+        XXS（cross-site scripting跨域脚本攻击）
+    ---攻击原理：
+        恶意攻击者往Web页面里插入恶意Script(php,js等)代码，当用户浏览该页之时，嵌入其中Web里面的Script代码会被执行，从而达到恶意攻击用户的特殊目的。
+    ---防御措施：
+        原理：主要采用过滤器对请求中的特殊字符进行编码转化。从而将可以执行的script代码变为不可以执行的script脚本存储到数据库中。
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">## 9.算法类</span><br></pre></td></tr></table></figure>
+<pre><code>1.排序（必须准备）
+   快速排序：https://segmentfault.com/a/1190000009426421
+   选择排序：https://segmentfault.com/a/1190000009366805
+   希尔排序：https://segmentfault.com/a/1190000009461832
+2.堆栈（必须准备）、队列（不一定准备）、链表（不一定准备）
+    堆栈：https://juejin.im/entry/58759e79128fe1006b48cdfd
+    队列：https://juejin.im/entry/58759e79128fe1006b48cdfd
+    链表：https://juejin.im/entry/58759e79128fe1006b48cdfd
+3.递归（必须准备）
+    https://segmentfault.com/a/1190000009857470
+</code></pre><p><code>`</code></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://githanlongf.github.io/zhiqiu.github.io/2018/12/10/一面题/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/zhiqiu.github.io/2018/11/11/子元素div上下左右居中方法总结/" class="archive-article-date">
-  	<time datetime="2018-11-11T02:35:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-11</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/zhiqiu.github.io/2018/11/11/子元素div上下左右居中方法总结/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">子元素div上下左右居中方法总结</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/zhiqiu.github.io/2018/11/11/子元素div上下左右居中方法总结/">子元素div上下左右居中方法总结</a>
-    </h1>
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="一面题" data-title="一面题" data-url="https://githanlongf.github.io/zhiqiu.github.io/zhiqiu.github.io/2018/12/10/一面题/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+  
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/zhiqiu.github.io/2018/11/10/必要知道的-25-个-JavaScript问题/" class="archive-article-date">
-  	<time datetime="2018-11-10T09:11:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/zhiqiu.github.io/2018/11/10/必要知道的-25-个-JavaScript问题/">必要知道的 25 个 JavaScript问题</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/zhiqiu.github.io/2018/11/10/10道典型的JavaScript问题和代码演示/" class="archive-article-date">
-  	<time datetime="2018-11-10T08:31:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/zhiqiu.github.io/2018/11/10/10道典型的JavaScript问题和代码演示/">10道典型的JavaScript问题</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/zhiqiu.github.io/2018/11/10/45种Javascript注意事项/" class="archive-article-date">
-  	<time datetime="2018-11-10T07:52:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/zhiqiu.github.io/2018/11/10/45种Javascript注意事项/">45种Javascript注意事项</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/zhiqiu.github.io/2018/11/08/ajax常见问题/" class="archive-article-date">
-  	<time datetime="2018-11-08T07:32:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/zhiqiu.github.io/2018/11/08/ajax常见问题/">ajax常见问题</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/zhiqiu.github.io/2018/11/07/关于HTTP请求方式：GET和POST的本质比较/" class="archive-article-date">
-  	<time datetime="2018-11-07T08:32:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/zhiqiu.github.io/2018/11/07/关于HTTP请求方式：GET和POST的本质比较/">关于HTTP请求方式：GET和POST的本质比较</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/zhiqiu.github.io/2018/11/07/js中常见的数组算法总结/" class="archive-article-date">
-  	<time datetime="2018-11-07T07:14:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/zhiqiu.github.io/2018/11/07/js中常见的数组算法总结/">js中常见的数组算法总结</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/zhiqiu.github.io/2018/11/07/js中的各种宽高以及位置总结/" class="archive-article-date">
-  	<time datetime="2018-11-07T02:13:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/zhiqiu.github.io/2018/11/07/js中的各种宽高以及位置总结/">js中的各种宽高以及位置总结</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/zhiqiu.github.io/2018/11/03/hello-world/" class="archive-article-date">
-  	<time datetime="2018-11-03T08:05:28.759Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/zhiqiu.github.io/2018/11/03/hello-world/">Hello World</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/zhiqiu.github.io/archives/page/2/">2</a><a class="extend next" rel="next" href="/zhiqiu.github.io/archives/page/2/">Next &raquo;</a>
-    </nav>
   
 
 
@@ -475,8 +693,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

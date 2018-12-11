@@ -6,18 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://githanlongf.github.io/zhiqiu.github.io">
-  <title>Archives | 越努力越幸福</title>
+  <title>子元素div上下左右居中方法总结 | 越努力越幸福</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="学习不刻苦,不如卖红薯">
-<meta property="og:type" content="website">
-<meta property="og:title" content="越努力越幸福">
-<meta property="og:url" content="https://githanlongf.github.io/zhiqiu.github.io/archives/index.html">
+  <meta name="description" content="最近在面试，不停地收到了知识冲击，尤其是对于一些基础的css、html、js问题居多。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="子元素div上下左右居中方法总结">
+<meta property="og:url" content="https://githanlongf.github.io/zhiqiu.github.io/2018/11/11/子元素div上下左右居中方法总结/index.html">
 <meta property="og:site_name" content="越努力越幸福">
-<meta property="og:description" content="学习不刻苦,不如卖红薯">
+<meta property="og:description" content="最近在面试，不停地收到了知识冲击，尤其是对于一些基础的css、html、js问题居多。">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-11-11T02:44:13.938Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="越努力越幸福">
-<meta name="twitter:description" content="学习不刻苦,不如卖红薯">
+<meta name="twitter:title" content="子元素div上下左右居中方法总结">
+<meta name="twitter:description" content="最近在面试，不停地收到了知识冲击，尤其是对于一些基础的css、html、js问题居多。">
   
     <link rel="alternative" href="/atom.xml" title="越努力越幸福" type="application/atom+xml">
   
@@ -159,295 +160,186 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-子元素div上下左右居中方法总结" class="article article-type-post " itemscope="" itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/zhiqiu.github.io/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/zhiqiu.github.io/2018/12/10/一面题/" class="archive-article-date">
-  	<time datetime="2018-12-10T06:18:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-10</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/zhiqiu.github.io/2018/12/10/一面题/">一面题</a>
+    <h1 class="article-title" itemprop="name">
+      子元素div上下左右居中方法总结
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/zhiqiu.github.io/2018/11/11/子元素div上下左右居中方法总结/" class="archive-article-date">
+        
+        <a href="/zhiqiu.github.io/2018/11/11/子元素div上下左右居中方法总结/" class="archive-article-date">
   	<time datetime="2018-11-11T02:35:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-11</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/zhiqiu.github.io/2018/11/11/子元素div上下左右居中方法总结/">子元素div上下左右居中方法总结</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>最近在面试，不停地收到了知识冲击，尤其是对于一些基础的css、html、js问题居多。<a id="more"></a>所以自我也在做反思，今天就css问题，如何让一个子元素div块元素上下左右居中</p>
+<h2 id="情景一：一个浏览器页面中，只有一个div模块，让其上下左右居中"><a href="#情景一：一个浏览器页面中，只有一个div模块，让其上下左右居中" class="headerlink" title="情景一：一个浏览器页面中，只有一个div模块，让其上下左右居中"></a>情景一：一个浏览器页面中，只有一个div模块，让其上下左右居中</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">解决方案：  &#123; </span><br><span class="line">                position:fixed;</span><br><span class="line">                background: red;</span><br><span class="line">                width: 100px;</span><br><span class="line">                height: 100px;</span><br><span class="line">　　　　　　　　　left:0;</span><br><span class="line">　　　　　　　　　right:0;</span><br><span class="line">　　　　　　　　　top:0;</span><br><span class="line">　　　　　　　　　bottom:0;</span><br><span class="line">　　　　　　     margin:auto; </span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">　　　　　　备注：此处小编使用position:fixed为最佳方案，因为position：fixed定位是相对于整个浏览器页面的。</span><br></pre></td></tr></table></figure>
+<h2 id="情景二：一个父元素div，一个已知宽度、高度的子元素div-200-300"><a href="#情景二：一个父元素div，一个已知宽度、高度的子元素div-200-300" class="headerlink" title="情景二：一个父元素div，一个已知宽度、高度的子元素div(200*300)"></a>情景二：一个父元素div，一个已知宽度、高度的子元素div(200*300)</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">解决方案： 1、position布局</span><br><span class="line"></span><br><span class="line">　　　　　　　&#123;</span><br><span class="line"></span><br><span class="line">　　　　　　 position:fixed/ansolute;</span><br><span class="line">            background: red;</span><br><span class="line">            width: 200px;</span><br><span class="line">            height:300px;</span><br><span class="line">            top:50%;</span><br><span class="line">            left:50%;</span><br><span class="line">            margin-left:-100px;</span><br><span class="line">            margin-top:-150px;</span><br><span class="line"></span><br><span class="line">　　　　　　&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="情景三-一个父元素div，一个未知宽度、高度的子元素div"><a href="#情景三-一个父元素div，一个未知宽度、高度的子元素div" class="headerlink" title="情景三:一个父元素div，一个未知宽度、高度的子元素div"></a>情景三:一个父元素div，一个未知宽度、高度的子元素div</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">解决方案： 1、position布局，position设为absolute，其他同情景一</span><br><span class="line"></span><br><span class="line">　　　　　　　　　　　 2、display：table</span><br><span class="line"></span><br><span class="line">　　　　　　　　　　　　父级元素：&#123; display:table;&#125;</span><br><span class="line"></span><br><span class="line">　　　　　　　　　　　　子级元素： &#123; display:table-cell;vertical-align:middle &#125;</span><br><span class="line"></span><br><span class="line">　　　　　　　　　　　 3、flex布局</span><br><span class="line"></span><br><span class="line">　　　　　　　　　　　　父级元素：&#123; display:flex;flex-direction:row;justify-content:center;align-items:center;&#125;</span><br><span class="line"></span><br><span class="line">　　　　　　　　　　　　子级元素：&#123;flex:1&#125;</span><br><span class="line"></span><br><span class="line">　　　　　　　　　　　4、translate</span><br><span class="line"></span><br><span class="line">　　　　　　　　　　　　position: absolute;</span><br><span class="line">　　　　　　　　　　　　top: 50%;</span><br><span class="line">　　　　　　　　　　　　left: 50%;</span><br><span class="line">　　　　　　　　　　　　-webkit-transform: translate(-50%, -50%);</span><br><span class="line">　　　　　　　　　　　　-moz-transform: translate(-50%, -50%);</span><br><span class="line">　　　　　　　　　　　　-ms-transform: translate(-50%, -50%);</span><br><span class="line">　　　　　　　　　　　　-o-transform: translate(-50%, -50%);</span><br><span class="line">　　　　　　　　　　　　transform: translate(-50%, -50%);</span><br></pre></td></tr></table></figure>
+      
 
-        <div class="article-info info-on-right">
-          
-          
-
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://githanlongf.github.io/zhiqiu.github.io/2018/11/11/子元素div上下左右居中方法总结/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/zhiqiu.github.io/2018/11/10/必要知道的-25-个-JavaScript问题/" class="archive-article-date">
-  	<time datetime="2018-11-10T09:11:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-10</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/zhiqiu.github.io/2018/12/10/一面题/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          一面题
+        
+      </div>
+    </a>
+  
+  
+    <a href="/zhiqiu.github.io/2018/11/10/必要知道的-25-个-JavaScript问题/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">必要知道的 25 个 JavaScript问题</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/zhiqiu.github.io/2018/11/10/必要知道的-25-个-JavaScript问题/">必要知道的 25 个 JavaScript问题</a>
-    </h1>
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="子元素div上下左右居中方法总结" data-title="子元素div上下左右居中方法总结" data-url="https://githanlongf.github.io/zhiqiu.github.io/zhiqiu.github.io/2018/11/11/子元素div上下左右居中方法总结/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+  
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/zhiqiu.github.io/2018/11/10/10道典型的JavaScript问题和代码演示/" class="archive-article-date">
-  	<time datetime="2018-11-10T08:31:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/zhiqiu.github.io/2018/11/10/10道典型的JavaScript问题和代码演示/">10道典型的JavaScript问题</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/zhiqiu.github.io/2018/11/10/45种Javascript注意事项/" class="archive-article-date">
-  	<time datetime="2018-11-10T07:52:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/zhiqiu.github.io/2018/11/10/45种Javascript注意事项/">45种Javascript注意事项</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/zhiqiu.github.io/2018/11/08/ajax常见问题/" class="archive-article-date">
-  	<time datetime="2018-11-08T07:32:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/zhiqiu.github.io/2018/11/08/ajax常见问题/">ajax常见问题</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/zhiqiu.github.io/2018/11/07/关于HTTP请求方式：GET和POST的本质比较/" class="archive-article-date">
-  	<time datetime="2018-11-07T08:32:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/zhiqiu.github.io/2018/11/07/关于HTTP请求方式：GET和POST的本质比较/">关于HTTP请求方式：GET和POST的本质比较</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/zhiqiu.github.io/2018/11/07/js中常见的数组算法总结/" class="archive-article-date">
-  	<time datetime="2018-11-07T07:14:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/zhiqiu.github.io/2018/11/07/js中常见的数组算法总结/">js中常见的数组算法总结</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/zhiqiu.github.io/2018/11/07/js中的各种宽高以及位置总结/" class="archive-article-date">
-  	<time datetime="2018-11-07T02:13:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/zhiqiu.github.io/2018/11/07/js中的各种宽高以及位置总结/">js中的各种宽高以及位置总结</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/zhiqiu.github.io/2018/11/03/hello-world/" class="archive-article-date">
-  	<time datetime="2018-11-03T08:05:28.759Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/zhiqiu.github.io/2018/11/03/hello-world/">Hello World</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/zhiqiu.github.io/archives/page/2/">2</a><a class="extend next" rel="next" href="/zhiqiu.github.io/archives/page/2/">Next &raquo;</a>
-    </nav>
   
 
 
@@ -475,8 +367,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
